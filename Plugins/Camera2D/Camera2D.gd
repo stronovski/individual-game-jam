@@ -22,8 +22,8 @@ func shake(duration = 0.2, frequency = 15, amplitude = 2, priority = 0):
 
 func _shake():
 	var rand = Vector2()
-	rand.x = rand_range(-amplitude, amplitude)
-	rand.y = rand_range(-amplitude, amplitude)
+	rand.x = randf_range(-amplitude, amplitude)
+	rand.y = randf_range(-amplitude, amplitude)
 	
 	$Tween.interpolate_property(self, "offset", offset, rand, 
 				$Frequency.wait_time, TRANS, EASE)

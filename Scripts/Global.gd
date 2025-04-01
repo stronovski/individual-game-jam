@@ -1,5 +1,7 @@
 extends Node2D
 
+signal beat(position)
+signal measure_signal(position)
 
 var score = 0
 var combo = 0

@@ -1,16 +1,15 @@
 extends Area2D
 
-const TARGET_Y = 164
-const SPAWN_Y = -16
-const DIST_TO_TARGET = TARGET_Y - SPAWN_Y
+const TARGET_X = 70
+const SPAWN_X = 350
+const DIST_TO_TARGET = abs(TARGET_X - SPAWN_X)
 
-const LEFT_LANE_SPAWN = Vector2(120, SPAWN_Y)
-const CENTRE_LANE_SPAWN = Vector2(160, SPAWN_Y)
-const RIGHT_LANE_SPAWN = Vector2(200, SPAWN_Y)
+const LEFT_LANE_SPAWN = Vector2(SPAWN_X, 20)
+const CENTRE_LANE_SPAWN = Vector2(SPAWN_X, 60)
+const RIGHT_LANE_SPAWN = Vector2(SPAWN_X, 100)
 
 var speed = 0
 var hit = false
-
 
 func _ready():
 	pass
@@ -18,34 +17,34 @@ func _ready():
 
 func _physics_process(delta):
 	if !hit:
-		position.y += speed * delta
-		if position.y > 200:
+		position.x -= speed * delta
+		if position.x < 0:
 			queue_free()
 			get_parent().reset_combo()
 	else:
-		$Node2D.position.y -= speed * delta
+		$Node2D.position.x -= speed * delta
 
 
 func initialize(lane):
 	if lane == 0:
-		$AnimatedSprite.frame = 0
+		$AnimatedSprite2D.frame = 0
 		position = LEFT_LANE_SPAWN
 	elif lane == 1:
-		$AnimatedSprite.frame = 1
+		$AnimatedSprite2D.frame = 1
 		position = CENTRE_LANE_SPAWN
 	elif lane == 2:
-		$AnimatedSprite.frame = 2
+		$AnimatedSprite2D.frame = 2
 		position = RIGHT_LANE_SPAWN
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
 		return
-	
+
 	speed = DIST_TO_TARGET / 2.0
 
 
 func destroy(score):
 	$CPUParticles2D.emitting = true
-	$AnimatedSprite.visible = false
+	$AnimatedSprite2D.visible = false
 	$Timer.start()
 	hit = true
 	if score == 3:

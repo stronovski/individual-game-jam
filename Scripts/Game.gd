@@ -28,13 +28,16 @@ var instance
 
 
 func _ready():
+	print("Game BPM: ", bpm)
 	randomize()
 	$Conductor.play_with_beat_offset(8)
-
+	
+	Global.beat.connect(_on_Conductor_beat)
+	Global.measure_signal.connect(_on_Conductor_measure)
 
 func _input(event):
 	if event.is_action("escape"):
-		if get_tree().change_scene("res://Scenes/Menu.tscn") != OK:
+		if get_tree().change_scene_to_file("res://Scenes/Menu.tscn") != OK:
 			print ("Error changing scene to Menu")
 
 
@@ -112,24 +115,33 @@ func _on_Conductor_beat(position):
 		Global.good = good
 		Global.okay = okay
 		Global.missed = missed
-		if get_tree().change_scene("res://Scenes/End.tscn") != OK:
+		if get_tree().change_scene_to_file("res://Scenes/End.tscn") != OK:
 			print ("Error changing scene to End")
 
 
 
 func _spawn_notes(to_spawn):
+	print("Attempting to spawn ", to_spawn, " notes")
 	if to_spawn > 0:
 		lane = randi() % 3
-		instance = note.instance()
-		instance.initialize(lane)
-		add_child(instance)
+		print("Spawning note in lane: ", lane)
+		instance = note.instantiate()
+		if instance:
+			instance.initialize(lane)
+			add_child(instance)
+			print("Note added successfully")
+		else:
+			print("Failed to instantiate note")
+				
 	if to_spawn > 1:
 		while rand == lane:
 			rand = randi() % 3
 		lane = rand
-		instance = note.instance()
-		instance.initialize(lane)
-		add_child(instance)
+		print("Spawning second note in lane: ", lane)
+		instance = note.instantiate()
+		if instance:
+			instance.initialize(lane)
+			add_child(instance)
 		
 
 
