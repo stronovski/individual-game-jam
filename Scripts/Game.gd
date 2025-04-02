@@ -120,7 +120,7 @@ func _on_Conductor_beat(position):
 func _spawn_notes(to_spawn):
 	print("Attempting to spawn ", to_spawn, " notes")
 	if to_spawn > 0:
-		lane = randi() % 3
+		lane = randi() % 2
 		var note_value = spawn_note_lane(lane)
 
 		instance = note.instantiate()
@@ -133,7 +133,7 @@ func _spawn_notes(to_spawn):
 				
 	if to_spawn > 1:
 		while rand == lane:
-			rand = randi() % 3
+			rand = randi() % 2
 		lane = rand
 		var note_value = spawn_note_lane(lane)
 		print("Spawning second note in lane: ", lane)
@@ -178,9 +178,10 @@ func spawn_note_lane(lane: int) -> String:
 	var note_value: String
 	
 	if lane == 0:
-		note_value = str(randi() % 10)
-	elif lane == 1:
-		note_value = char(97 + randi() % 26)
+		if randi() % 2 == 0:
+			note_value = str(randi() % 10)
+		else:
+			note_value = char(97 + randi() % 26)
 	else:
 		note_value = "space"
 	print("Spawning note in lane: ", lane, " with value: ", note_value)

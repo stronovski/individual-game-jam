@@ -20,16 +20,12 @@ scale = Vector2(1, 1.78113)
 texture = ExtResource("4")
 centered = false
 
-[node name="ArrowUp" parent="." instance=ExtResource("1")]
-position = Vector2(70, 60)
-lane_type = "letter"
-
 [node name="ArrowLeft" parent="." instance=ExtResource("1")]
 position = Vector2(70, 20)
 sprite_frames = ExtResource("2")
 
 [node name="ArrowButton" parent="." instance=ExtResource("1")]
-position = Vector2(70, 100)
+position = Vector2(70, 60)
 sprite_frames = ExtResource("3")
 lane_type = "space"
 

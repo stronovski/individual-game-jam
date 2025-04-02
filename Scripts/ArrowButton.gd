@@ -5,27 +5,21 @@ var good = false
 var okay = false
 var current_note = null
 
-@export var lane_type = "number" # number, "letter, or "space
+@export var lane_type = "combined" # number, "letter, or "space
 
 func _unhandled_input(event):
-	if event.is_action_pressed("0"):
-		print("mimika")
-	
 	var expected_input = ""
 	if current_note != null:
 		print("Note exists! Type: ", lane_type, " | Value: ", current_note.note_value)
 		expected_input = current_note.note_value
 		# Check if input matches the expected note value
-		if lane_type == "number" and event.is_action_pressed(str(expected_input)):
-			_handle_hit()
-		elif lane_type == "letter" and event.is_action_pressed(str(expected_input)):
+		if lane_type == "combined" and event.is_action_pressed(str(expected_input)):
 			_handle_hit()
 		elif lane_type == "space" and event.is_action_pressed("ui_accept"):
 			_handle_hit()
 			
 	# Visual feedback
-	if (lane_type == "number" and event.is_action_pressed("ui_" + str(expected_input))) or \
-		(lane_type == "letter" and event.as_text().to_lower() == expected_input) or \
+	if (lane_type == "combined" and event.is_action_pressed("ui_" + str(expected_input))) or \
 		(lane_type == "space" and event.is_action_pressed("ui_accept")):
 		frame = 1
 	elif event.is_action_released("ui_" + str(expected_input)) or \

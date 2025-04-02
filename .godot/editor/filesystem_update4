@@ -8,3 +8,4 @@ res://Scenes/ArrowButton.tscn
 res://Scenes/Note.tscn
 res://Scripts/Note.gd
 res://Scripts/Game.gd
+res://Scripts/ArrowButton.gd
