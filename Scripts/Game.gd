@@ -9,7 +9,7 @@ var good = 0
 var okay = 0
 var missed = 0
 
-var bpm = 115
+var bpm = 85
 
 var song_position = 0.0
 var song_position_in_beats = 0
@@ -25,7 +25,6 @@ var lane = 0
 var rand = 0
 var note = load("res://Scenes/Note.tscn")
 var instance
-
 
 func _ready():
 	print("Game BPM: ", bpm)
@@ -118,18 +117,17 @@ func _on_Conductor_beat(position):
 		if get_tree().change_scene_to_file("res://Scenes/End.tscn") != OK:
 			print ("Error changing scene to End")
 
-
-
 func _spawn_notes(to_spawn):
 	print("Attempting to spawn ", to_spawn, " notes")
 	if to_spawn > 0:
 		lane = randi() % 3
-		print("Spawning note in lane: ", lane)
+		var note_value = spawn_note_lane(lane)
+
 		instance = note.instantiate()
 		if instance:
-			instance.initialize(lane)
+			instance.initialize(lane, note_value)
 			add_child(instance)
-			print("Note added successfully")
+			print("Spawned note with value: ", note_value)
 		else:
 			print("Failed to instantiate note")
 				
@@ -137,11 +135,13 @@ func _spawn_notes(to_spawn):
 		while rand == lane:
 			rand = randi() % 3
 		lane = rand
+		var note_value = spawn_note_lane(lane)
 		print("Spawning second note in lane: ", lane)
 		instance = note.instantiate()
 		if instance:
-			instance.initialize(lane)
+			instance.initialize(lane, note_value)
 			add_child(instance)
+			print("Spawned note with value: ", note_value)
 		
 
 
@@ -170,7 +170,18 @@ func increment_score(by):
 	else:
 		$Combo.text = ""
 
-
 func reset_combo():
 	combo = 0
 	$Combo.text = ""
+	
+func spawn_note_lane(lane: int) -> String:
+	var note_value: String
+	
+	if lane == 0:
+		note_value = str(randi() % 10)
+	elif lane == 1:
+		note_value = char(97 + randi() % 26)
+	else:
+		note_value = "space"
+	print("Spawning note in lane: ", lane, " with value: ", note_value)
+	return note_value

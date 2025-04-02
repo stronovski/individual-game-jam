@@ -4,12 +4,15 @@ const TARGET_X = 70
 const SPAWN_X = 350
 const DIST_TO_TARGET = abs(TARGET_X - SPAWN_X)
 
-const LEFT_LANE_SPAWN = Vector2(SPAWN_X, 20)
-const CENTRE_LANE_SPAWN = Vector2(SPAWN_X, 60)
-const RIGHT_LANE_SPAWN = Vector2(SPAWN_X, 100)
+const LEFT_LANE_SPAWN = Vector2(SPAWN_X, 20) # Numbers lane (top)
+const CENTRE_LANE_SPAWN = Vector2(SPAWN_X, 60) # Letters lane (middle)
+const RIGHT_LANE_SPAWN = Vector2(SPAWN_X, 100) # Space lane (bottom)
 
 var speed = 0
 var hit = false
+@export var note_value = ""
+
+@onready var feedback_label = $Node2D/FeedbackLabel
 
 func _ready():
 	pass
@@ -25,16 +28,22 @@ func _physics_process(delta):
 		$Node2D.position.x -= speed * delta
 
 
-func initialize(lane):
+func initialize(lane, value = ""):
 	if lane == 0:
-		$AnimatedSprite2D.frame = 0
 		position = LEFT_LANE_SPAWN
+		note_value = value
+		$Node2D/NoteLabel.text = note_value
+		#note_label.modulate = Color("f6d6bd")
 	elif lane == 1:
-		$AnimatedSprite2D.frame = 1
 		position = CENTRE_LANE_SPAWN
+		note_value = value
+		$Node2D/NoteLabel.text = note_value
+		#note_label.modulate = Color("f6d6bd")
 	elif lane == 2:
-		$AnimatedSprite2D.frame = 2
 		position = RIGHT_LANE_SPAWN
+		note_value = value
+		$Node2D/NoteLabel.text = note_value
+		#note_label.modulate = Color("f6d6bd")
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
 		return
@@ -44,19 +53,18 @@ func initialize(lane):
 
 func destroy(score):
 	$CPUParticles2D.emitting = true
-	$AnimatedSprite2D.visible = false
+	$Node2D/NoteLabel.visible = false
 	$Timer.start()
 	hit = true
 	if score == 3:
-		$Node2D/Label.text = "GREAT"
-		$Node2D/Label.modulate = Color("f6d6bd")
+		feedback_label.text = "GREAT"
+		feedback_label.modulate = Color("f6d6bd")
 	elif score == 2:
-		$Node2D/Label.text = "GOOD"
-		$Node2D/Label.modulate = Color("c3a38a")
+		feedback_label.text = "GOOD"
+		feedback_label.modulate = Color("c3a38a")
 	elif score == 1:
-		$Node2D/Label.text = "OKAY"
-		$Node2D/Label.modulate = Color("997577")
-
+		feedback_label.text = "OKAY"
+		feedback_label.modulate = Color("997577")
 
 func _on_Timer_timeout():
 	queue_free()

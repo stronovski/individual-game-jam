@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5ymko851lsjx"
+path="res://.godot/imported/Sufjan Stevens, Death With Dignity (Official Audio).mp3-745adb3abab01715dd9b76ac1c743cfa.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio).mp3"
+dest_files=["res://.godot/imported/Sufjan Stevens, Death With Dignity (Official Audio).mp3-745adb3abab01715dd9b76ac1c743cfa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
