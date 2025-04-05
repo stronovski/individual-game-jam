@@ -1,5 +1,6 @@
 extends AnimatedSprite2D
 
+
 var perfect = false
 var good = false
 var okay = false
@@ -7,24 +8,25 @@ var current_note = null
 
 @export var lane_type = "combined" # number, "letter, or "space
 
+
 func _unhandled_input(event):
 	var expected_input = ""
 	if current_note != null:
 		print("Note exists! Type: ", lane_type, " | Value: ", current_note.note_value)
 		expected_input = current_note.note_value
-		# Check if input matches the expected note value
-		if lane_type == "combined" and event.is_action_pressed(str(expected_input)):
+		if lane_type == "combined" and event.is_action_pressed(str(expected_input).to_lower()):
 			_handle_hit()
 		elif lane_type == "space" and event.is_action_pressed("ui_accept"):
 			_handle_hit()
 			
 	# Visual feedback
-	if (lane_type == "combined" and event.is_action_pressed("ui_" + str(expected_input))) or \
+	if (lane_type == "combined" and event.is_action_pressed(str(expected_input).to_lower())) or \
 		(lane_type == "space" and event.is_action_pressed("ui_accept")):
 		frame = 1
-	elif event.is_action_released("ui_" + str(expected_input)) or \
+	elif event.is_action_released(str(expected_input)) or \
 		event.is_action_released("ui_accept"):
 		$PushTimer.start()
+
 
 func _handle_hit():
 	if perfect:
@@ -37,6 +39,7 @@ func _handle_hit():
 		get_parent().increment_score(1)
 		current_note.destroy(1)
 	_reset()
+
 
 func _on_PerfectArea_area_entered(area):
 	if area.is_in_group("note"):

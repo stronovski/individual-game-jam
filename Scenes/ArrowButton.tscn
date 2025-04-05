@@ -13,6 +13,7 @@ size = Vector2(8, 16)
 size = Vector2(8, 24)
 
 [node name="ArrowButton" type="AnimatedSprite2D"]
+texture_filter = 1
 sprite_frames = ExtResource("1")
 script = ExtResource("2")
 
@@ -29,7 +30,6 @@ rotation = 1.5708
 shape = SubResource("2")
 
 [node name="OkayArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OkayArea"]
 rotation = 1.5708

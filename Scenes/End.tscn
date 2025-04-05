@@ -8,10 +8,12 @@
 [ext_resource type="Script" path="res://Scripts/End.gd" id="6"]
 
 [node name="End" type="Node2D"]
+texture_filter = 1
 scale = Vector2(6, 6)
 script = ExtResource("6")
 
 [node name="PlayAgain" type="TextureButton" parent="."]
+texture_filter = 1
 offset_left = 48.0
 offset_top = 128.0
 offset_right = 144.0
@@ -21,6 +23,7 @@ texture_pressed = ExtResource("1")
 texture_hover = ExtResource("4")
 
 [node name="BackToMenu" type="TextureButton" parent="."]
+texture_filter = 1
 offset_left = 176.0
 offset_top = 128.0
 offset_right = 272.0

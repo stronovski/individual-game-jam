@@ -179,9 +179,9 @@ func spawn_note_lane(lane: int) -> String:
 	
 	if lane == 0:
 		if randi() % 2 == 0:
-			note_value = str(randi() % 10)
+			note_value = str(randi() % 10).to_upper()
 		else:
-			note_value = char(97 + randi() % 26)
+			note_value = char(97 + randi() % 26).to_upper()
 	else:
 		note_value = "space"
 	print("Spawning note in lane: ", lane, " with value: ", note_value)

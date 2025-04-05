@@ -4,7 +4,7 @@ const TARGET_X = 70
 const SPAWN_X = 300
 const DIST_TO_TARGET = abs(TARGET_X - SPAWN_X)
 
-const LEFT_LANE_SPAWN = Vector2(SPAWN_X, 20) # Numbers + letters lane (top)
+const LEFT_LANE_SPAWN = Vector2(SPAWN_X, 30) # Numbers + letters lane (top)
 const RIGHT_LANE_SPAWN = Vector2(SPAWN_X, 60) # Space lane (bottom)
 
 var speed = 0
@@ -32,12 +32,12 @@ func initialize(lane, value = ""):
 		position = LEFT_LANE_SPAWN
 		note_value = value
 		$Node2D/NoteLabel.text = note_value
-		#note_label.modulate = Color("f6d6bd")
+		$Node2D/NoteLabel.modulate = Color("363636")
 	elif lane == 1:
 		position = RIGHT_LANE_SPAWN
 		note_value = value
 		$Node2D/NoteLabel.text = note_value
-		#note_label.modulate = Color("f6d6bd")
+		$Node2D/NoteLabel.modulate = Color("363636")
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
 		return
@@ -59,6 +59,7 @@ func destroy(score):
 	elif score == 1:
 		feedback_label.text = "OKAY"
 		feedback_label.modulate = Color("997577")
+
 
 func _on_Timer_timeout():
 	queue_free()
