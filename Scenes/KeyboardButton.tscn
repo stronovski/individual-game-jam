@@ -1,30 +1,30 @@
 [gd_scene load_steps=9 format=3 uid="uid://bxuwms7d281tv"]
 
-[ext_resource type="Texture2D" uid="uid://uj02k12x0kc2" path="res://Sprites/new/button_normal.png" id="1_kyl0l"]
 [ext_resource type="Script" path="res://Scripts/KeyboardButton.gd" id="1_q3vl5"]
-[ext_resource type="Texture2D" uid="uid://px3b81sp8wcj" path="res://Sprites/new/button_unclickable.png" id="2_un0ni"]
-[ext_resource type="Texture2D" uid="uid://cvstlavp2or0j" path="res://Sprites/new/button_clicked.png" id="3_aprlu"]
-[ext_resource type="Texture2D" uid="uid://blch6k2y6d8av" path="res://Sprites/new/space_normal.png" id="5_0vjjo"]
-[ext_resource type="Texture2D" uid="uid://bq2hrakojv4l1" path="res://Sprites/new/space_clicked.png" id="6_g3m2c"]
+[ext_resource type="Texture2D" uid="uid://bkwr5vx17j4kg" path="res://Sprites/new color palette/Buttons/button_normal.png" id="2_qrmb7"]
+[ext_resource type="Texture2D" uid="uid://cx73bjkgaqkcx" path="res://Sprites/new color palette/Buttons/button_clicked.png" id="3_ixjl5"]
+[ext_resource type="Texture2D" uid="uid://b6np4vnst2y81" path="res://Sprites/new color palette/Buttons/button_unclickable.png" id="4_txcan"]
+[ext_resource type="Texture2D" uid="uid://krv3vktvxlst" path="res://Sprites/new color palette/Buttons/space_normal.png" id="5_yvjj8"]
+[ext_resource type="Texture2D" uid="uid://df2juj1swvf6" path="res://Sprites/new color palette/Buttons/space_clicked.png" id="6_fjjgj"]
 [ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="7_8exei"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m5hwp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_kyl0l")
+"texture": ExtResource("2_qrmb7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_aprlu")
+"texture": ExtResource("3_ixjl5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_un0ni")
+"texture": ExtResource("4_txcan")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_0vjjo")
+"texture": ExtResource("5_yvjj8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_g3m2c")
+"texture": ExtResource("6_fjjgj")
 }],
 "loop": true,
 "name": &"default",

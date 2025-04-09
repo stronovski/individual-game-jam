@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743863780
-default_env.tres::Environment::3936046334559004553::1743863780::0::1::::<><>::
+::res://::1744179923
+default_env.tres::Environment::3936046334559004553::1744147462::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1743259681::0::1::::<><>::
 icon.png::CompressedTexture2D::356530785270263926::1743259681::1743260086::1::::<><>::
 README.md::TextFile::-1::1743259681::0::1::::<><>::
@@ -17,10 +17,10 @@ Kingthings Trypewriter 2.ttf::FontFile::3811834219396286047::1743845518::1743845
 ManaFont.tres::FontFile::-1::1743260072::0::1::::<><>::res://Fonts/manaspc.ttf
 manaspc.ttf::FontFile::9110629227456432509::1743259685::1743260086::1::::<><>::
 TypewriterzDemoBold.ttf::FontFile::2884547232041545602::1743845968::1743846001::1::::<><>::
-::res://Frames/::1743505372
-arrow_left_frames.tres::SpriteFrames::-1::1743260072::0::1::::<><>::res://Sprites/game/arrow_button/left/arrow_button_left1.png<>res://Sprites/game/arrow_button/left/arrow_button_left2.png
+::res://Frames/::1744147146
+arrow_left_frames.tres::SpriteFrames::6162398639867756490::1744147146::0::1::::<><>::uid://dmk6my3ojxogu::::res://Sprites/game/arrow_button/left/arrow_button_left1.png<>uid://btsdaj3vnbkqf::::res://Sprites/game/arrow_button/left/arrow_button_left2.png
 arrow_right_frames.tres::SpriteFrames::-1::1743260072::0::1::::<><>::res://Sprites/game/arrow_button/right/arrow_button_right1.png<>res://Sprites/game/arrow_button/right/arrow_button_right2.png
-arrow_up_frames.tres::SpriteFrames::-1::1743260072::0::1::::<><>::res://Sprites/game/arrow_button/up/arrow_button_up2.png<>res://Sprites/game/arrow_button/up/arrow_button_up1.png
+arrow_up_frames.tres::SpriteFrames::197663565496849494::1744147146::0::1::::<><>::uid://qyw6eagaiv35::::res://Sprites/game/arrow_button/up/arrow_button_up2.png<>uid://c0d0b5f5t005v::::res://Sprites/game/arrow_button/up/arrow_button_up1.png
 note_frames.tres::SpriteFrames::1435408595622181881::1743505372::0::1::::<><>::uid://b1oys6mthbskc::::res://Sprites/game/arrow_button/up/arrow_button_up3.png<>uid://bxp3xol3ctp71::::res://Sprites/game/arrow_button/right/arrow_button_right3.png<>uid://divhsay5thhlk::::res://Sprites/game/arrow_button/left/arrow_button_left3.png
 ::res://Plugins/::1743259685
 ::res://Plugins/Camera2D/::1743259685
@@ -28,36 +28,37 @@ Camera2D.gd::GDScript::-1::1743260072::0::1::::<>Camera2D<>::
 Camera2D.tscn::PackedScene::-1::1743260072::0::1::::<><>::res://Plugins/Camera2D/Camera2D.gd
 ::res://Plugins/Scripts/::1743259685
 SimpleTopDownMovement.gd::GDScript::-1::1743260072::0::1::::<>CharacterBody2D<>::
-::res://Scenes/::1743863780
-ArrowButton.tscn::PackedScene::4906149125800919849::1743863779::0::1::::<><>::res://Frames/arrow_up_frames.tres<>res://Scripts/ArrowButton.gd
-Conductor.tscn::PackedScene::2463033680242902508::1743863778::0::1::::<><>::res://Scripts/Conductor.gd
-End.tscn::PackedScene::1204342142817356251::1743863779::0::1::::<><>::uid://bnop7i2g42grt::::res://Sprites/ui/play_again_button/play_again1.png<>uid://3h2l5ikfac88::::res://Sprites/ui/back_to_menu_button/back_to_menu2.png<>uid://cdi1w1f5pbsr1::::res://Sprites/ui/back_to_menu_button/back_to_menu1.png<>uid://433tre3advfn::::res://Sprites/ui/play_again_button/play_again2.png<>res://Fonts/heartbit2x.tres<>res://Scripts/End.gd
-Game.tscn::PackedScene::8181547965454816352::1743863779::0::1::::<><>::uid://cb5ttas53463n::::res://Scenes/ArrowButton.tscn<>res://Frames/arrow_left_frames.tres<>uid://ddee4mwevi6m1::::res://Sprites/new/background.png<>res://Frames/arrow_right_frames.tres<>res://Scripts/Game.gd<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf<>res://Fonts/heartbit2x.tres<>uid://bbdd2mohh0im3::::res://Scenes/Conductor.tscn<>uid://c5ymko851lsjx::::res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio).mp3<>uid://0wi3dbaegixu::::res://Sprites/space_normal.png<>uid://bxuwms7d281tv::::res://Scenes/KeyboardButton.tscn
-Global.tscn::PackedScene::5143347195676556900::1743863778::0::1::::<><>::res://Scripts/Global.gd
-KeyboardButton.tscn::PackedScene::4043409840844521371::1743863780::0::1::::<><>::uid://uj02k12x0kc2::::res://Sprites/new/button_normal.png<>res://Scripts/KeyboardButton.gd<>uid://px3b81sp8wcj::::res://Sprites/new/button_unclickable.png<>uid://cvstlavp2or0j::::res://Sprites/new/button_clicked.png<>uid://blch6k2y6d8av::::res://Sprites/new/space_normal.png<>uid://bq2hrakojv4l1::::res://Sprites/new/space_clicked.png<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf
-Menu.tscn::PackedScene::6605321498974419750::1743863778::0::1::::<><>::res://Scripts/Menu.gd<>uid://dsr0yhktwlvl8::::res://Sprites/ui/play_button/play1.png<>uid://dhiunljr1xnge::::res://Sprites/ui/play_button/play2.png<>res://Fonts/heartbit2x.tres<>uid://bv0wtjhqvuolj::::res://Sprites/ui/slider.png<>uid://c4ko87eb5fj0h::::res://Sprites/ui/slider_content.png<>uid://bbkm6cyj212sq::::res://Sprites/ui/slider_arrow2.png<>uid://bacbpegnqkq23::::res://Sprites/ui/slider_arrow1.png<>uid://cmswfj3tkmjas::::res://Sprites/ui/test_button/test_button1.png<>uid://j744jq134njj::::res://Sprites/ui/test_button/test_button2.png<>uid://bhwygeg3ga24d::::res://Sounds/bell_ding.ogg
-Note.tscn::PackedScene::1381187425677008456::1743863779::0::1::::<><>::uid://upk78fe6g5xt::::res://Frames/note_frames.tres<>uid://ceij3xl5o0x8c::::res://Sprites/game/particles/star.png<>res://Fonts/heartbit2x.tres<>res://Scripts/Note.gd
-test.tscn::PackedScene::4179537843424812888::1743863780::0::1::::<><>::uid://dbrk4ommpexn1::::res://Sprites/game/arrow_button/right/arrow_button_right2.png
-::res://Scripts/::1743863778
-ArrowButton.gd::GDScript::-1::1743620026::0::1::::<>AnimatedSprite2D<>::
+::res://Scenes/::1744147462
+ArrowButton.tscn::PackedScene::4906149125800919849::1744147462::0::1::::<><>::uid://c20qwqyn34m1::::res://Frames/arrow_up_frames.tres<>res://Scripts/ArrowButton.gd
+Conductor.tscn::PackedScene::2463033680242902508::1744147462::0::1::::<><>::res://Scripts/Conductor.gd
+End.tscn::PackedScene::1204342142817356251::1744147462::0::1::::<><>::uid://bnop7i2g42grt::::res://Sprites/ui/play_again_button/play_again1.png<>uid://3h2l5ikfac88::::res://Sprites/ui/back_to_menu_button/back_to_menu2.png<>uid://cdi1w1f5pbsr1::::res://Sprites/ui/back_to_menu_button/back_to_menu1.png<>uid://433tre3advfn::::res://Sprites/ui/play_again_button/play_again2.png<>res://Fonts/heartbit2x.tres<>res://Scripts/End.gd
+Game.tscn::PackedScene::8181547965454816352::1744147462::0::1::::<><>::uid://cb5ttas53463n::::res://Scenes/ArrowButton.tscn<>uid://ct2d2m48falk1::::res://Frames/arrow_left_frames.tres<>uid://b5okq46gtfqxi::::res://Sprites/new color palette/Background/background_colpalnew.png<>res://Frames/arrow_right_frames.tres<>res://Scripts/Game.gd<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf<>uid://bbdd2mohh0im3::::res://Scenes/Conductor.tscn<>uid://c5ymko851lsjx::::res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio).mp3<>uid://bx12ncmje8boy::::res://Scenes/KeyboardButtonCompiled.tscn<>uid://b4gwi8vqq5jmo::::res://Sprites/new color palette/Background/combo_background.png
+Global.tscn::PackedScene::5143347195676556900::1744147462::0::1::::<><>::res://Scripts/Global.gd
+KeyboardButton.tscn::PackedScene::4043409840844521371::1744147462::0::1::::<><>::res://Scripts/KeyboardButton.gd<>uid://bkwr5vx17j4kg::::res://Sprites/new color palette/Buttons/button_normal.png<>uid://cx73bjkgaqkcx::::res://Sprites/new color palette/Buttons/button_clicked.png<>uid://b6np4vnst2y81::::res://Sprites/new color palette/Buttons/button_unclickable.png<>uid://krv3vktvxlst::::res://Sprites/new color palette/Buttons/space_normal.png<>uid://df2juj1swvf6::::res://Sprites/new color palette/Buttons/space_clicked.png<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf
+KeyboardButtonCompiled.tscn::PackedScene::4056100607098774368::1744147462::0::1::::<><>::uid://bxuwms7d281tv::::res://Scenes/KeyboardButton.tscn
+Menu.tscn::PackedScene::6605321498974419750::1744147462::0::1::::<><>::res://Scripts/Menu.gd<>uid://dsr0yhktwlvl8::::res://Sprites/ui/play_button/play1.png<>uid://dhiunljr1xnge::::res://Sprites/ui/play_button/play2.png<>res://Fonts/heartbit2x.tres<>uid://bv0wtjhqvuolj::::res://Sprites/ui/slider.png<>uid://c4ko87eb5fj0h::::res://Sprites/ui/slider_content.png<>uid://bbkm6cyj212sq::::res://Sprites/ui/slider_arrow2.png<>uid://bacbpegnqkq23::::res://Sprites/ui/slider_arrow1.png<>uid://cmswfj3tkmjas::::res://Sprites/ui/test_button/test_button1.png<>uid://j744jq134njj::::res://Sprites/ui/test_button/test_button2.png<>uid://bhwygeg3ga24d::::res://Sounds/bell_ding.ogg
+Note.tscn::PackedScene::1381187425677008456::1744147462::0::1::::<><>::uid://ceij3xl5o0x8c::::res://Sprites/game/particles/star.png<>res://Scripts/Note.gd<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf
+test.tscn::PackedScene::4179537843424812888::1744147462::0::1::::<><>::uid://dbrk4ommpexn1::::res://Sprites/game/arrow_button/right/arrow_button_right2.png
+::res://Scripts/::1744147429
+ArrowButton.gd::GDScript::-1::1744144391::0::1::::<>AnimatedSprite2D<>::
 Conductor.gd::GDScript::-1::1743260660::0::1::::<>AudioStreamPlayer<>::
 End.gd::GDScript::-1::1743260072::0::1::::<>Node2D<>::
-Game.gd::GDScript::-1::1743614443::0::1::::<>Node2D<>::
+Game.gd::GDScript::-1::1744147429::0::1::::<>Node2D<>::
 Global.gd::GDScript::-1::1743260660::0::1::::<>Node2D<>::
-KeyboardButton.gd::GDScript::-1::1743863778::0::1::::<>Node2D<>::
+KeyboardButton.gd::GDScript::-1::1744143769::0::1::::<>Node2D<>::
 Menu.gd::GDScript::-1::1743260072::0::1::::<>Node2D<>::
-Note.gd::GDScript::-1::1743822721::0::1::::<>Area2D<>::
+Note.gd::GDScript::-1::1744144342::0::1::::<>Area2D<>::
 ::res://Sounds/::1743593339
 bell_ding.ogg::AudioStreamOggVorbis::2924627042980936489::1743259686::1743260086::1::::<><>::
 song.ogg::AudioStreamOggVorbis::4742497212588780949::1743259686::1743260086::1::::<><>::
 Sufjan Stevens, Death With Dignity (Official Audio).mp3::AudioStreamMP3::6928798992180563465::1743593261::1743593339::1::::<><>::
-::res://Sprites/::1743850145
+::res://Sprites/::1744143142
 button_normal.png::CompressedTexture2D::813343354816143880::1743845351::1743845356::1::::<><>::
 button_pressed.png::CompressedTexture2D::5871207491066078065::1743845351::1743845356::1::::<><>::
 button_unclickable.png::CompressedTexture2D::8993374879310986924::1743845351::1743845356::1::::<><>::
 space_normal.png::CompressedTexture2D::1800673298832039538::1743845351::1743845356::1::::<><>::
 space_pressed.png::CompressedTexture2D::7979038849387067797::1743845351::1743845356::1::::<><>::
-::res://Sprites/game/::1743259687
+::res://Sprites/game/::1744138052
 ::res://Sprites/game/arrow_button/::1743492967
 ::res://Sprites/game/arrow_button/left/::1743260086
 arrow_button_left1.png::CompressedTexture2D::8024076913042879136::1743259686::1743260086::1::::<><>::
@@ -73,10 +74,11 @@ arrow_button_up2.png::CompressedTexture2D::1173957908124219562::1743259687::1743
 arrow_button_up3.png::CompressedTexture2D::4241722906589658486::1743259687::1743260086::1::::<><>::
 ::res://Sprites/game/particles/::1743260086
 star.png::CompressedTexture2D::5070709445547728744::1743259687::1743260086::1::::<><>::
-::res://Sprites/game/road/::1743822175
+::res://Sprites/game/road/::1744138052
 Background.png::CompressedTexture2D::6600199478208130708::1743822139::1743822175::1::::<><>::
 road.png::CompressedTexture2D::6152906841099762736::1743259687::1743260086::1::::<><>::
-::res://Sprites/new/::1743865084
+score_background.png::CompressedTexture2D::4220243000441019410::1744138022::1744138052::1::::<><>::
+::res://Sprites/new/::1743865089
 background.png::CompressedTexture2D::7378381413480001598::1743850121::1743850155::1::::<><>::
 background_buttons.png::CompressedTexture2D::179978033902541081::1743864855::1743865089::1::::<><>::
 button_clicked.png::CompressedTexture2D::6285139183112550751::1743852147::1743852155::1::::<><>::
@@ -84,6 +86,20 @@ button_normal.png::CompressedTexture2D::1423922980458682143::1743852147::1743852
 button_unclickable.png::CompressedTexture2D::1102016978779901277::1743852147::1743852155::1::::<><>::
 space_clicked.png::CompressedTexture2D::3565635774804008060::1743852147::1743852155::1::::<><>::
 space_normal.png::CompressedTexture2D::3163107665855247201::1743852147::1743852155::1::::<><>::
+::res://Sprites/new color palette/::1744146476
+::res://Sprites/new color palette/Background/::1744144008
+background_colpalnew.png::CompressedTexture2D::4521624595385362222::1744143205::1744143322::1::::<><>::
+combo_background.png::CompressedTexture2D::4435635242373485818::1744144003::1744144008::1::::<><>::
+::res://Sprites/new color palette/Buttons/::1744143494
+button_clicked.png::CompressedTexture2D::6454947209213674179::1744143260::1744143264::1::::<><>::
+button_normal.png::CompressedTexture2D::3134812333102242710::1744143260::1744143264::1::::<><>::
+button_unclickable.png::CompressedTexture2D::4590075414106749540::1744143260::1744143264::1::::<><>::
+space_clicked.png::CompressedTexture2D::222544916210741485::1744143472::1744143494::1::::<><>::
+space_normal.png::CompressedTexture2D::738309036607423499::1744143453::1744143494::1::::<><>::
+::res://Sprites/new color palette/UI/::1744146488
+::res://Sprites/new color palette/UI/Judgement Line/::1744146583
+JudgementLine_Clicked.png::CompressedTexture2D::6519285165752160769::1744146553::1744146583::1::::<><>::
+JudgementLine_normal.png::CompressedTexture2D::1311063196487750671::1744146560::1744146583::1::::<><>::
 ::res://Sprites/ui/::1743260086
 play_button1.png::CompressedTexture2D::4420150169995727332::1743259687::1743260086::1::::<><>::
 play_button2.png::CompressedTexture2D::2672147038697768026::1743259687::1743260086::1::::<><>::

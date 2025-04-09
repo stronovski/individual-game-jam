@@ -1,5 +1,4 @@
-extends AnimatedSprite2D
-
+extends Node2D
 
 var perfect = false
 var good = false
@@ -22,22 +21,26 @@ func _unhandled_input(event):
 	# Visual feedback
 	if (lane_type == "combined" and event.is_action_pressed(str(expected_input).to_lower())) or \
 		(lane_type == "space" and event.is_action_pressed("ui_accept")):
-		frame = 1
+		$AnimatedSprite2D.frame = 1
 	elif event.is_action_released(str(expected_input)) or \
 		event.is_action_released("ui_accept"):
-		$PushTimer.start()
+			_reset_button_state()
+			$PushTimer.start()
 
 
 func _handle_hit():
+	var score_value = 0
 	if perfect:
-		get_parent().increment_score(3)
-		current_note.destroy(3)
+		score_value = 3
 	elif good:
-		get_parent().increment_score(2)
-		current_note.destroy(2)
+		score_value = 2
 	elif okay:
-		get_parent().increment_score(1)
-		current_note.destroy(1)
+		score_value = 1
+		
+	if score_value > 0:
+		get_parent().increment_score(score_value)
+		current_note.destroy(score_value)
+		_reset_button_state()
 	_reset()
 
 
@@ -72,11 +75,17 @@ func _on_OkayArea_area_entered(area):
 func _on_OkayArea_area_exited(area):
 	if area.is_in_group("note"):
 		okay = false
-		current_note = null
+		#current_note = null
+		if current_note == area:
+			area.start_falling_behind()
+			get_parent().emit_missed()
+			get_parent().show_feedback(0)
+			current_note = null
 
 
 func _on_PushTimer_timeout():
-	frame = 0
+	if current_note == null:
+		$AnimatedSprite2D.frame = 0
 
 
 func _reset():
@@ -84,3 +93,9 @@ func _reset():
 	perfect = false
 	good = false
 	okay = false
+	
+func _reset_button_state():
+	$AnimatedSprite2D.frame = 0
+	if $PushTimer.is_stopped() == false:
+		$PushTimer.stop()
+	

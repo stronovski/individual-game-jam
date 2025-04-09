@@ -26,6 +26,14 @@ var rand = 0
 var note = load("res://Scenes/Note.tscn")
 var instance
 
+var feedback_duration = 0.3
+
+var full_text = ""
+
+var current_char_index = 0
+
+@onready var feedback_label = $CanvasLayer/FeedbackLabel
+
 func _ready():
 	print("Game BPM: ", bpm)
 	randomize()
@@ -33,12 +41,13 @@ func _ready():
 	
 	Global.beat.connect(_on_Conductor_beat)
 	Global.measure_signal.connect(_on_Conductor_measure)
+	
+	feedback_label.visible = false
 
 func _input(event):
 	if event.is_action("escape"):
 		if get_tree().change_scene_to_file("res://Scenes/Menu.tscn") != OK:
 			print ("Error changing scene to Menu")
-
 
 func _on_Conductor_measure(position):
 	if position == 1:
@@ -142,8 +151,39 @@ func _spawn_notes(to_spawn):
 			instance.initialize(lane, note_value)
 			add_child(instance)
 			print("Spawned note with value: ", note_value)
+	
+func show_feedback(score):
+	if $FeedbackTimer.time_left > 0:
+		$FeedbackTimer.stop()
 		
-
+	match score:
+		3:
+			feedback_label.text = "GREAT"
+			feedback_label.modulate = Color("f6d6bd")
+			#$GreatSound.play()
+		2:
+			feedback_label.text = "GOOD"
+			feedback_label.modulate = Color("c3a38a")
+			#$GoodSound.play()
+		1:
+			feedback_label.text = "OKAY"
+			feedback_label.modulate = Color("997577")
+			#$OkaySound.play()
+		0:
+			feedback_label.text = "MISS"
+			feedback_label.modulate = Color("ff0000")
+			#$MissSound.play()
+		
+	feedback_label.visible = true
+	feedback_label.scale = Vector2(1.2, 1.2)
+	var tween = create_tween()
+	tween.tween_property(feedback_label, "scale", Vector2(1,1), 0.1)
+	
+	$FeedbackTimer.wait_time = feedback_duration
+	$FeedbackTimer.start()
+	
+func emit_missed():
+	increment_score(0)
 
 func increment_score(by):
 	if by > 0:
@@ -160,19 +200,20 @@ func increment_score(by):
 	else:
 		missed += 1
 	
-	
 	score += by * combo
-	$Label.text = str(score)
+	$CanvasLayer/ScoreLabel.text = str(score)
 	if combo > 0:
-		$Combo.text = str(combo) + " combo!"
+		$CanvasLayer/Combo.text = str(combo)
 		if combo > max_combo:
 			max_combo = combo
 	else:
-		$Combo.text = ""
+		$CanvasLayer/Combo.text = ""
+
 
 func reset_combo():
 	combo = 0
-	$Combo.text = ""
+	$CanvasLayer/Combo.text = ""
+	
 	
 func spawn_note_lane(lane: int) -> String:
 	var note_value: String

@@ -1,15 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dotg5t86iuel1"]
+[gd_scene load_steps=9 format=3 uid="uid://dotg5t86iuel1"]
 
 [ext_resource type="PackedScene" uid="uid://cb5ttas53463n" path="res://Scenes/ArrowButton.tscn" id="1"]
-[ext_resource type="SpriteFrames" path="res://Frames/arrow_left_frames.tres" id="2"]
-[ext_resource type="Texture2D" uid="uid://ddee4mwevi6m1" path="res://Sprites/new/background.png" id="2_0cgsb"]
-[ext_resource type="SpriteFrames" path="res://Frames/arrow_right_frames.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://b5okq46gtfqxi" path="res://Sprites/new color palette/Background/background_colpalnew.png" id="2_bu1p8"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="6"]
 [ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="6_7j0u8"]
-[ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="7"]
 [ext_resource type="PackedScene" uid="uid://bbdd2mohh0im3" path="res://Scenes/Conductor.tscn" id="8"]
 [ext_resource type="AudioStream" uid="uid://c5ymko851lsjx" path="res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio).mp3" id="8_7cl43"]
-[ext_resource type="PackedScene" uid="uid://bxuwms7d281tv" path="res://Scenes/KeyboardButton.tscn" id="11_haitb"]
+[ext_resource type="PackedScene" uid="uid://bx12ncmje8boy" path="res://Scenes/KeyboardButtonCompiled.tscn" id="8_b1ac1"]
+[ext_resource type="Texture2D" uid="uid://b4gwi8vqq5jmo" path="res://Sprites/new color palette/Background/combo_background.png" id="9_lodq4"]
 
 [node name="Game" type="Node2D"]
 scale = Vector2(6, 6)
@@ -24,283 +22,96 @@ size_flags_vertical = 3
 [node name="road" type="Sprite2D" parent="HBoxContainer"]
 position = Vector2(0, 8.88178e-16)
 scale = Vector2(0.166667, 0.166512)
-texture = ExtResource("2_0cgsb")
+texture = ExtResource("2_bu1p8")
 centered = false
 
 [node name="ArrowLeft" parent="." instance=ExtResource("1")]
 position = Vector2(84, 30)
-sprite_frames = ExtResource("2")
 
 [node name="ArrowButton" parent="." instance=ExtResource("1")]
 position = Vector2(84, 60)
-sprite_frames = ExtResource("3")
 lane_type = "space"
-
-[node name="Label" type="Label" parent="."]
-texture_filter = 1
-offset_left = 11.6667
-offset_top = 19.6667
-offset_right = 51.6667
-offset_bottom = 38.6667
-theme_override_colors/font_color = Color(0.168627, 0.0980392, 0.109804, 0.67451)
-theme_override_fonts/font = ExtResource("6_7j0u8")
-text = "0"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Combo" type="Label" parent="."]
-offset_left = 9.0
-offset_top = 48.8333
-offset_right = 101.0
-offset_bottom = 62.8333
-theme_override_colors/font_color = Color(0.168627, 0.0980392, 0.109804, 0.67451)
-theme_override_fonts/font = ExtResource("7")
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Conductor" parent="." instance=ExtResource("8")]
 stream = ExtResource("8_7cl43")
 volume_db = -15.0
 bpm = 115
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 12.3333
-offset_top = 43.0
-offset_right = 52.3333
-offset_bottom = 66.0
-theme_override_colors/font_color = Color(0.168627, 0.0980392, 0.109804, 0.67451)
+[node name="FeedbackTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="KeyboardButtonCompiled" parent="." instance=ExtResource("8_b1ac1")]
+
+[node name="ComboBackground" type="Sprite2D" parent="."]
+position = Vector2(33.1667, 43.6667)
+scale = Vector2(0.165667, 0.165667)
+texture = ExtResource("9_lodq4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0177083
+anchor_top = 0.0212963
+anchor_right = 0.0786458
+anchor_bottom = 0.062963
+offset_left = 1729.0
+offset_top = -24.0
+offset_right = 1769.0
+offset_bottom = -5.0
+theme_override_colors/font_color = Color(0.909804, 0.831373, 0.635294, 1)
+theme_override_fonts/font = ExtResource("6_7j0u8")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="1" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(35.5, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "1"
+[node name="Combo" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.0520833
+anchor_top = -0.0342593
+anchor_right = 0.0604167
+anchor_bottom = -0.0101852
+offset_left = 140.0
+offset_top = 296.0
+offset_right = 232.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(0.968627, 0.937255, 0.87451, 1)
+theme_override_fonts/font = ExtResource("6_7j0u8")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="2" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(59.4999, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "2"
+[node name="FeedbackLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.0101852
+anchor_bottom = 0.0101852
+offset_left = 47.0
+offset_top = 118.0
+offset_right = 340.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.709804, 0.482353, 0.447059, 1)
+theme_override_fonts/font = ExtResource("6_7j0u8")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="3" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(83.5, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "3"
-
-[node name="4" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(107.5, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "4"
-
-[node name="5" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(131.5, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "5"
-
-[node name="6" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(155.5, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "6"
-
-[node name="7" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(179.333, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "7"
-
-[node name="8" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(203.333, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "8"
-
-[node name="9" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(227.333, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "9"
-
-[node name="0" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(251.333, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "0"
-
-[node name="Unclickable7" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(275.333, 104.833)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Unclickable6" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(23.1667, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Q" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(47.1666, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "q"
-
-[node name="W" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(71.1667, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "w"
-
-[node name="E" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(95.1667, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "e"
-
-[node name="R" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(119.167, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "r"
-
-[node name="T" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(143.167, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "t"
-
-[node name="Y" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(167, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "y"
-
-[node name="U" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(191, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "u"
-
-[node name="I" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(215, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "i"
-
-[node name="O" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(239, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "o"
-
-[node name="P" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(263, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "p"
-
-[node name="Unclickable11" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(287, 119.667)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Unclickable5" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(26, 136)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="A" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(50, 136)
-scale = Vector2(0.17, 0.17)
-
-[node name="S" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(74, 136)
-scale = Vector2(0.17, 0.17)
-letter = "s"
-
-[node name="D" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(98, 136)
-scale = Vector2(0.17, 0.17)
-letter = "d"
-
-[node name="F" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(122, 136)
-scale = Vector2(0.17, 0.17)
-letter = "f"
-
-[node name="G" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(146, 136)
-scale = Vector2(0.17, 0.17)
-letter = "g"
-
-[node name="H" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(169.833, 136)
-scale = Vector2(0.17, 0.17)
-letter = "h"
-
-[node name="J" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(193.833, 136)
-scale = Vector2(0.17, 0.17)
-letter = "j"
-
-[node name="K" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(217.833, 136)
-scale = Vector2(0.17, 0.17)
-letter = "k"
-
-[node name="L" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(241.833, 136)
-scale = Vector2(0.17, 0.17)
-letter = "l"
-
-[node name="Unclickable8" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(265.833, 136)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Unclickable9" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(289.833, 136)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Unclickable1" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(37, 150)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Z" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(61, 150)
-scale = Vector2(0.17, 0.17)
-letter = "z"
-
-[node name="X" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(85, 150)
-scale = Vector2(0.17, 0.17)
-letter = "x"
-
-[node name="C" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(109, 150)
-scale = Vector2(0.17, 0.17)
-letter = "c"
-
-[node name="V" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(133, 150)
-scale = Vector2(0.17, 0.17)
-letter = "v"
-
-[node name="B" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(157, 150)
-scale = Vector2(0.17, 0.17)
-letter = "b"
-
-[node name="N" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(180.833, 150)
-scale = Vector2(0.17, 0.17)
-letter = "n"
-
-[node name="M" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(204.833, 150)
-scale = Vector2(0.17, 0.17)
-letter = "m"
-
-[node name="Unclickable2" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(228.833, 150)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Unclickable3" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(252.833, 150)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Unclickable4" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(276.833, 150)
-scale = Vector2(0.17, 0.17)
-letter = "unclickable"
-
-[node name="Unclickable10" parent="." instance=ExtResource("11_haitb")]
-position = Vector2(160.333, 162)
-scale = Vector2(0.17, 0.17)
-letter = "space"
+[node name="TitleLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0177083
+anchor_top = 0.0212963
+anchor_right = 0.0484375
+anchor_bottom = 0.0601852
+offset_left = -33.0
+offset_top = -22.0
+offset_right = 272.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0.941176, 0.886275, 0.780392, 1)
+theme_override_fonts/font = ExtResource("6_7j0u8")
+theme_override_font_sizes/font_size = 30
+text = "Death with Dignity"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

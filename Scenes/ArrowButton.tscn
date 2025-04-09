@@ -1,7 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb5ttas53463n"]
+[gd_scene load_steps=8 format=3 uid="uid://cb5ttas53463n"]
 
-[ext_resource type="SpriteFrames" path="res://Frames/arrow_up_frames.tres" id="1"]
 [ext_resource type="Script" path="res://Scripts/ArrowButton.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cy48w6m1lsj0l" path="res://Sprites/new color palette/UI/Judgement Line/JudgementLine_Clicked.png" id="2_x1p6c"]
+[ext_resource type="Texture2D" uid="uid://sxdawkp3uj2v" path="res://Sprites/new color palette/UI/Judgement Line/JudgementLine_normal.png" id="3_1efot"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fbxcq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1efot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x1p6c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(8, 4)
@@ -12,10 +27,13 @@ size = Vector2(8, 16)
 [sub_resource type="RectangleShape2D" id="3"]
 size = Vector2(8, 24)
 
-[node name="ArrowButton" type="AnimatedSprite2D"]
+[node name="ArrowButton" type="Node2D"]
 texture_filter = 1
-sprite_frames = ExtResource("1")
 script = ExtResource("2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_fbxcq")
 
 [node name="PerfectArea" type="Area2D" parent="."]
 

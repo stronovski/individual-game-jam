@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6xrlk1hkfgbc"]
+
+[ext_resource type="Script" path="res://Scripts/LevelSelect.gd" id="1_cf0yn"]
+[ext_resource type="Texture2D" uid="uid://b5okq46gtfqxi" path="res://Sprites/new color palette/Background/background_colpalnew.png" id="2_uxrxg"]
+[ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="3_3slxg"]
+[ext_resource type="Texture2D" uid="uid://bnop7i2g42grt" path="res://Sprites/ui/play_again_button/play_again1.png" id="4_udbgd"]
+[ext_resource type="Texture2D" uid="uid://433tre3advfn" path="res://Sprites/ui/play_again_button/play_again2.png" id="5_cdqlb"]
+[ext_resource type="Texture2D" uid="uid://cdi1w1f5pbsr1" path="res://Sprites/ui/back_to_menu_button/back_to_menu1.png" id="6_movdt"]
+[ext_resource type="Texture2D" uid="uid://3h2l5ikfac88" path="res://Sprites/ui/back_to_menu_button/back_to_menu2.png" id="7_pdk7u"]
+
+[node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_cf0yn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 321.0
+offset_bottom = 180.0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="road" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(0, 8.88178e-16)
+scale = Vector2(0.166667, 0.166512)
+texture = ExtResource("2_uxrxg")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0177083
+anchor_top = 0.0212963
+anchor_right = 0.0786458
+anchor_bottom = 0.062963
+offset_left = 1729.0
+offset_top = -24.0
+offset_right = 1769.0
+offset_bottom = -5.0
+theme_override_colors/font_color = Color(0.909804, 0.831373, 0.635294, 1)
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Combo" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.0520833
+anchor_top = -0.0342593
+anchor_right = 0.0604167
+anchor_bottom = -0.0101852
+offset_left = 140.0
+offset_top = 296.0
+offset_right = 232.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(0.968627, 0.937255, 0.87451, 1)
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="FeedbackLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.0101852
+anchor_bottom = 0.0101852
+offset_left = 47.0
+offset_top = 118.0
+offset_right = 340.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.709804, 0.482353, 0.447059, 1)
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayAgain" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 48.0
+offset_top = 128.0
+offset_right = 144.0
+offset_bottom = 168.0
+texture_normal = ExtResource("4_udbgd")
+texture_pressed = ExtResource("4_udbgd")
+texture_hover = ExtResource("5_cdqlb")
+
+[node name="BackToMenu" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 176.0
+offset_top = 128.0
+offset_right = 272.0
+offset_bottom = 168.0
+texture_normal = ExtResource("6_movdt")
+texture_pressed = ExtResource("6_movdt")
+texture_hover = ExtResource("7_pdk7u")

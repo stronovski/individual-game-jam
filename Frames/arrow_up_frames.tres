@@ -1,12 +1,18 @@
-[gd_resource type="SpriteFrames" load_steps=3 format=2]
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://c20qwqyn34m1"]
 
-[ext_resource path="res://Sprites/game/arrow_button/up/arrow_button_up2.png" type="Texture2D" id=1]
-[ext_resource path="res://Sprites/game/arrow_button/up/arrow_button_up1.png" type="Texture2D" id=2]
+[ext_resource type="Texture2D" uid="uid://qyw6eagaiv35" path="res://Sprites/game/arrow_button/up/arrow_button_up2.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c0d0b5f5t005v" path="res://Sprites/game/arrow_button/up/arrow_button_up1.png" id="2"]
 
 [resource]
-animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]

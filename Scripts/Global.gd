@@ -3,6 +3,9 @@ extends Node2D
 signal beat(position)
 signal measure_signal(position)
 
+var current_level: LevelData  # Store the selected level
+var levels: Array[LevelData] = []  # All available levels
+
 var score = 0
 var combo = 0
 var great = 0

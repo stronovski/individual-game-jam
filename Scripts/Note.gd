@@ -11,7 +11,10 @@ var speed = 0
 var hit = false
 @export var note_value = ""
 
-@onready var feedback_label = $Node2D/FeedbackLabel
+var falling_behind := false
+@onready var original_z_index = z_index
+
+#@onready var feedback_label = $Node2D/FeedbackLabel
 
 func _ready():
 	pass
@@ -21,8 +24,12 @@ func _physics_process(delta):
 	if !hit:
 		position.x -= speed * delta
 		if position.x < 0:
+			if !hit:
+				if get_parent().has_method("reset_combo"):
+					#get_parent().emit_missed()
+					#get_parent().show_feedback(0)
+					get_parent().reset_combo()
 			queue_free()
-			get_parent().reset_combo()
 	else:
 		$Node2D.position.x -= speed * delta
 
@@ -50,16 +57,11 @@ func destroy(score):
 	$Node2D/NoteLabel.visible = false
 	$Timer.start()
 	hit = true
-	if score == 3:
-		feedback_label.text = "GREAT"
-		feedback_label.modulate = Color("f6d6bd")
-	elif score == 2:
-		feedback_label.text = "GOOD"
-		feedback_label.modulate = Color("c3a38a")
-	elif score == 1:
-		feedback_label.text = "OKAY"
-		feedback_label.modulate = Color("997577")
-
+	get_parent().show_feedback(score)
 
 func _on_Timer_timeout():
 	queue_free()
+	
+func start_falling_behind():
+	falling_behind = true
+	z_index = -1

@@ -33,7 +33,7 @@ func _input(event):
 func _press_button():
 	var tween = create_tween()
 	if letter == "space":
-		tween.tween_property($AnimatedSprite2D, "frame", 4, 0.05)
+		tween.tween_property($AnimatedSprite2D, "frame", 10, 0.05)
 		tween.parallel().tween_property($AnimatedSprite2D, "position", 
 									  default_button_position + pressed_button_offset, 
 									  0.04)
