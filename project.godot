@@ -18,6 +18,11 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Scenes/Global.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://DialogueBalloons/balloon.tscn"
 
 [display]
 
@@ -28,6 +33,10 @@ window/size/window_height_override=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 window/size/fullscreen=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 
@@ -234,6 +243,10 @@ z={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":122,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Dialogues/dialogue.dialogue")
 
 [rendering]
 

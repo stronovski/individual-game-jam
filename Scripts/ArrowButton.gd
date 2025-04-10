@@ -24,7 +24,6 @@ func _unhandled_input(event):
 		$AnimatedSprite2D.frame = 1
 	elif event.is_action_released(str(expected_input)) or \
 		event.is_action_released("ui_accept"):
-			_reset_button_state()
 			$PushTimer.start()
 
 
@@ -40,7 +39,7 @@ func _handle_hit():
 	if score_value > 0:
 		get_parent().increment_score(score_value)
 		current_note.destroy(score_value)
-		_reset_button_state()
+	
 	_reset()
 
 
@@ -80,12 +79,10 @@ func _on_OkayArea_area_exited(area):
 			area.start_falling_behind()
 			get_parent().emit_missed()
 			get_parent().show_feedback(0)
-			current_note = null
 
 
 func _on_PushTimer_timeout():
-	if current_note == null:
-		$AnimatedSprite2D.frame = 0
+	$AnimatedSprite2D.frame = 0
 
 
 func _reset():
@@ -93,9 +90,4 @@ func _reset():
 	perfect = false
 	good = false
 	okay = false
-	
-func _reset_button_state():
-	$AnimatedSprite2D.frame = 0
-	if $PushTimer.is_stopped() == false:
-		$PushTimer.stop()
 	

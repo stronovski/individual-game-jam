@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=3 uid="uid://dotg5t86iuel1"]
+
+[ext_resource type="PackedScene" uid="uid://cb5ttas53463n" path="res://Scenes/ArrowButton.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://b5okq46gtfqxi" path="res://Sprites/new color palette/Background/background_colpalnew.png" id="2_bu1p8"]
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="6"]
+[ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="6_7j0u8"]
+[ext_resource type="PackedScene" uid="uid://bbdd2mohh0im3" path="res://Scenes/Conductor.tscn" id="8"]
+[ext_resource type="AudioStream" uid="uid://c5ymko851lsjx" path="res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio).mp3" id="8_7cl43"]
+[ext_resource type="PackedScene" uid="uid://bx12ncmje8boy" path="res://Scenes/KeyboardButtonCompiled.tscn" id="8_b1ac1"]
+[ext_resource type="Texture2D" uid="uid://b4gwi8vqq5jmo" path="res://Sprites/new color palette/Background/combo_background.png" id="9_lodq4"]
+
+[node name="Game" type="Node2D"]
+scale = Vector2(6, 6)
+script = ExtResource("6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 321.0
+offset_bottom = 180.0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="road" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(0, 8.88178e-16)
+scale = Vector2(0.166667, 0.166512)
+texture = ExtResource("2_bu1p8")
+centered = false
+
+[node name="ArrowLeft" parent="." instance=ExtResource("1")]
+position = Vector2(84, 30)
+
+[node name="ArrowButton" parent="." instance=ExtResource("1")]
+position = Vector2(84, 60)
+lane_type = "space"
+
+[node name="Conductor" parent="." instance=ExtResource("8")]
+stream = ExtResource("8_7cl43")
+volume_db = -15.0
+bpm = 115
+
+[node name="FeedbackTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="KeyboardButtonCompiled" parent="." instance=ExtResource("8_b1ac1")]
+
+[node name="ComboBackground" type="Sprite2D" parent="."]
+position = Vector2(33.1667, 43.6667)
+scale = Vector2(0.165667, 0.165667)
+texture = ExtResource("9_lodq4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0177083
+anchor_top = 0.0212963
+anchor_right = 0.0786458
+anchor_bottom = 0.062963
+offset_left = 1729.0
+offset_top = -24.0
+offset_right = 1769.0
+offset_bottom = -5.0
+theme_override_colors/font_color = Color(0.909804, 0.831373, 0.635294, 1)
+theme_override_fonts/font = ExtResource("6_7j0u8")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Combo" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.0520833
+anchor_top = -0.0342593
+anchor_right = 0.0604167
+anchor_bottom = -0.0101852
+offset_left = 140.0
+offset_top = 296.0
+offset_right = 232.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(0.968627, 0.937255, 0.87451, 1)
+theme_override_fonts/font = ExtResource("6_7j0u8")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="FeedbackLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.0101852
+anchor_bottom = 0.0101852
+offset_left = 47.0
+offset_top = 118.0
+offset_right = 340.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.709804, 0.482353, 0.447059, 1)
+theme_override_fonts/font = ExtResource("6_7j0u8")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0177083
+anchor_top = 0.0212963
+anchor_right = 0.0484375
+anchor_bottom = 0.0601852
+offset_left = -33.0
+offset_top = -22.0
+offset_right = 272.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0.941176, 0.886275, 0.780392, 1)
+theme_override_fonts/font = ExtResource("6_7j0u8")
+theme_override_font_sizes/font_size = 30
+text = "Death with Dignity"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

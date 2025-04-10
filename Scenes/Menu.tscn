@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1dwxeeiakxhm"]
+[gd_scene load_steps=15 format=3 uid="uid://c1dwxeeiakxhm"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://dsr0yhktwlvl8" path="res://Sprites/ui/play_button/play1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://diw6dftauyv8r" path="res://Sprites/new color palette/Background/Main Menu.png" id="2_tl4al"]
 [ext_resource type="Texture2D" uid="uid://dhiunljr1xnge" path="res://Sprites/ui/play_button/play2.png" id="3"]
 [ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="4"]
 [ext_resource type="Texture2D" uid="uid://bv0wtjhqvuolj" path="res://Sprites/ui/slider.png" id="5"]
@@ -26,16 +27,29 @@ texture_filter = 1
 scale = Vector2(6, 6)
 script = ExtResource("1")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 321.0
+offset_bottom = 180.0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="road" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(0, 8.88178e-16)
+scale = Vector2(0.166667, 0.166512)
+texture = ExtResource("2_tl4al")
+centered = false
+
 [node name="Start_Button" type="TextureButton" parent="."]
-offset_left = 100.0
-offset_top = 65.0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 167.167
+offset_top = 113.833
+offset_right = 295.167
+offset_bottom = 161.833
 texture_normal = ExtResource("2")
 texture_pressed = ExtResource("2")
 texture_hover = ExtResource("3")
 
 [node name="HSlider" type="HSlider" parent="."]
+visible = false
 offset_left = 256.0
 offset_top = 8.0
 offset_right = 312.0
@@ -50,6 +64,7 @@ step = 0.05
 value = 1.0
 
 [node name="Label" type="Label" parent="."]
+visible = false
 texture_filter = 1
 offset_left = 216.0
 offset_top = 8.0
@@ -62,6 +77,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 texture_filter = 1
 offset_left = 96.0
 offset_top = 160.0
@@ -74,6 +90,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 259.728
 offset_top = 24.712
 offset_right = 307.728
