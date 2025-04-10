@@ -1,5 +1,6 @@
 res://default_env.tres
 res://Scenes/Menu.tscn
+res://Scripts/PlayButton.gd
 res://Scenes/Conductor.tscn
 res://Scenes/Global.tscn
 res://Scenes/Game.tscn
@@ -11,10 +12,7 @@ res://Scenes/test.tscn
 res://Scenes/KeyboardButtonCompiled.tscn
 res://Scenes/LevelSelect.tscn
 res://DialogueBalloons/balloon.tscn
-res://Scenes/test_scene.tscn
-res://Scenes/test_scene.gd
-res://addons/dialogue_manager/test_scene.gd
-res://Scripts/ArrowButton.gd
-res://Scripts/test_scene.gd
-res://DialogueBalloons/balloon.gd
-res://DialogueBalloons/CharacterSprite.gd
+res://Scenes/Prologue.tscn
+res://Scenes/Star.tscn
+res://Scripts/Prologue.gd
+res://Scripts/LevelSelect.gd

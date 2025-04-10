@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://txb7qdryuqw3"]
 
 [ext_resource type="Texture2D" uid="uid://ceij3xl5o0x8c" path="res://Sprites/game/particles/star.png" id="2"]
+[ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="3_s5niv"]
 [ext_resource type="Script" path="res://Scripts/Note.gd" id="4"]
-[ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="4_6c1tu"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(8, 8)
@@ -39,7 +39,7 @@ offset_top = -11.0
 offset_right = 20.0
 offset_bottom = 13.0
 theme_override_colors/font_color = Color(0.36, 0.2124, 0.2124, 1)
-theme_override_fonts/font = ExtResource("4_6c1tu")
+theme_override_fonts/font = ExtResource("3_s5niv")
 theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1
 vertical_alignment = 1

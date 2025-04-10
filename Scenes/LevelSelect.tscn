@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6xrlk1hkfgbc"]
+[gd_scene load_steps=7 format=3 uid="uid://b6xrlk1hkfgbc"]
 
 [ext_resource type="Script" path="res://Scripts/LevelSelect.gd" id="1_cf0yn"]
-[ext_resource type="Texture2D" uid="uid://b5okq46gtfqxi" path="res://Sprites/new color palette/Background/background_colpalnew.png" id="2_uxrxg"]
+[ext_resource type="Texture2D" uid="uid://daxskl4m07x4d" path="res://Sprites/new color palette/Background/Death With Dignity.png" id="2_r6wg7"]
 [ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="3_3slxg"]
-[ext_resource type="Texture2D" uid="uid://bnop7i2g42grt" path="res://Sprites/ui/play_again_button/play_again1.png" id="4_udbgd"]
-[ext_resource type="Texture2D" uid="uid://433tre3advfn" path="res://Sprites/ui/play_again_button/play_again2.png" id="5_cdqlb"]
-[ext_resource type="Texture2D" uid="uid://cdi1w1f5pbsr1" path="res://Sprites/ui/back_to_menu_button/back_to_menu1.png" id="6_movdt"]
-[ext_resource type="Texture2D" uid="uid://3h2l5ikfac88" path="res://Sprites/ui/back_to_menu_button/back_to_menu2.png" id="7_pdk7u"]
+[ext_resource type="FontFile" uid="uid://dc5o30b1fag" path="res://Fonts/Chalkduster.ttf" id="4_kk3m4"]
+[ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="5_70px4"]
+[ext_resource type="AudioStream" uid="uid://gwiij4y1s684" path="res://Sounds/old-radio-button-click-97549.mp3" id="6_cp23x"]
 
 [node name="LevelSelect" type="Node2D"]
 script = ExtResource("1_cf0yn")
@@ -16,80 +15,72 @@ offset_right = 321.0
 offset_bottom = 180.0
 size_flags_horizontal = 6
 size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="road" type="Sprite2D" parent="HBoxContainer"]
 position = Vector2(0, 8.88178e-16)
-scale = Vector2(0.166667, 0.166512)
-texture = ExtResource("2_uxrxg")
+texture = ExtResource("2_r6wg7")
 centered = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.0177083
-anchor_top = 0.0212963
-anchor_right = 0.0786458
-anchor_bottom = 0.062963
-offset_left = 1729.0
-offset_top = -24.0
-offset_right = 1769.0
-offset_bottom = -5.0
-theme_override_colors/font_color = Color(0.909804, 0.831373, 0.635294, 1)
-theme_override_fonts/font = ExtResource("3_3slxg")
-theme_override_font_sizes/font_size = 40
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Combo" type="Label" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = -0.0520833
-anchor_top = -0.0342593
-anchor_right = 0.0604167
-anchor_bottom = -0.0101852
-offset_left = 140.0
-offset_top = 296.0
-offset_right = 232.0
-offset_bottom = 409.0
-theme_override_colors/font_color = Color(0.968627, 0.937255, 0.87451, 1)
+[node name="Label" type="Label" parent="."]
+offset_left = 283.0
+offset_top = 158.0
+offset_right = 869.0
+offset_bottom = 381.0
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_constants/line_spacing = -10
 theme_override_fonts/font = ExtResource("3_3slxg")
 theme_override_font_sizes/font_size = 100
+text = "Death with
+Dignity"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="FeedbackLabel" type="Label" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_top = 0.0101852
-anchor_bottom = 0.0101852
-offset_left = 47.0
-offset_top = 118.0
-offset_right = 340.0
-offset_bottom = 231.0
-theme_override_colors/font_color = Color(0.709804, 0.482353, 0.447059, 1)
+[node name="Label2" type="Label" parent="."]
+offset_left = 290.0
+offset_top = 380.0
+offset_right = 865.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0.500993, 0.33406, 0.225939, 1)
 theme_override_fonts/font = ExtResource("3_3slxg")
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 60
+text = "Sufjan Stevens"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayAgain" type="TextureButton" parent="."]
-texture_filter = 1
-offset_left = 48.0
-offset_top = 128.0
-offset_right = 144.0
-offset_bottom = 168.0
-texture_normal = ExtResource("4_udbgd")
-texture_pressed = ExtResource("4_udbgd")
-texture_hover = ExtResource("5_cdqlb")
+[node name="WriteButton" type="LinkButton" parent="."]
+offset_left = 420.0
+offset_top = 755.0
+offset_right = 801.0
+offset_bottom = 885.0
+theme_override_colors/font_color = Color(0.176471, 0.176471, 0.176471, 1)
+theme_override_fonts/font = ExtResource("4_kk3m4")
+theme_override_font_sizes/font_size = 70
+text = "> Write"
+script = ExtResource("5_70px4")
+scene_to_load = "Game"
+metadata/_edit_use_anchors_ = true
 
-[node name="BackToMenu" type="TextureButton" parent="."]
-texture_filter = 1
-offset_left = 176.0
-offset_top = 128.0
-offset_right = 272.0
-offset_bottom = 168.0
-texture_normal = ExtResource("6_movdt")
-texture_pressed = ExtResource("6_movdt")
-texture_hover = ExtResource("7_pdk7u")
+[node name="Label3" type="Label" parent="."]
+offset_left = 224.0
+offset_top = 521.0
+offset_right = 952.0
+offset_bottom = 705.0
+theme_override_colors/font_color = Color(0.56, 0.39928, 0.3304, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 35
+text = "A note, Lingering in the draft.
+Words left unspoken to
+the bringer of her existence
+from the very start."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonClickPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_cp23x")
+
+[connection signal="pressed" from="WriteButton" to="WriteButton" method="_on_pressed"]

@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://DialogueBalloons/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Texture2D" uid="uid://p5n6y41jt0aj" path="res://Sprites/new color palette/Sprites/Nini.png" id="2_iuets"]
-[ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="2_k0xtd"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="FontFile" uid="uid://dc5o30b1fag" path="res://Fonts/Chalkduster.ttf" id="3_a0547"]
 [ext_resource type="AudioStream" uid="uid://cttg2a7ih3xaf" path="res://Sounds/TypeWriter_Multiple_01/TypeWriter_Mutiple_v1_wav.wav" id="6_4f8lw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -56,7 +56,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
-default_font = ExtResource("2_k0xtd")
+default_font = ExtResource("3_a0547")
 default_font_size = 45
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")

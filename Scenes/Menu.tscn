@@ -1,26 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://c1dwxeeiakxhm"]
+[gd_scene load_steps=9 format=3 uid="uid://c1dwxeeiakxhm"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://dsr0yhktwlvl8" path="res://Sprites/ui/play_button/play1.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://diw6dftauyv8r" path="res://Sprites/new color palette/Background/Main Menu.png" id="2_tl4al"]
-[ext_resource type="Texture2D" uid="uid://dhiunljr1xnge" path="res://Sprites/ui/play_button/play2.png" id="3"]
-[ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="4"]
-[ext_resource type="Texture2D" uid="uid://bv0wtjhqvuolj" path="res://Sprites/ui/slider.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://c4ko87eb5fj0h" path="res://Sprites/ui/slider_content.png" id="6"]
-[ext_resource type="Texture2D" uid="uid://bbkm6cyj212sq" path="res://Sprites/ui/slider_arrow2.png" id="7"]
-[ext_resource type="Texture2D" uid="uid://bacbpegnqkq23" path="res://Sprites/ui/slider_arrow1.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://cmswfj3tkmjas" path="res://Sprites/ui/test_button/test_button1.png" id="9"]
-[ext_resource type="Texture2D" uid="uid://j744jq134njj" path="res://Sprites/ui/test_button/test_button2.png" id="10"]
-[ext_resource type="AudioStream" uid="uid://bhwygeg3ga24d" path="res://Sounds/bell_ding.ogg" id="11"]
-
-[sub_resource type="StyleBoxTexture" id="1"]
-texture = ExtResource("5")
-region_rect = Rect2(0, 0, 32, 16)
-
-[sub_resource type="StyleBoxTexture" id="2"]
-texture = ExtResource("6")
-expand_margin_right = 8.0
-region_rect = Rect2(0, 0, 16, 16)
+[ext_resource type="Texture2D" uid="uid://bu0vkxkeywpjc" path="res://Sprites/new color palette/UI/Main Menu New.png" id="2_3so2u"]
+[ext_resource type="FontFile" uid="uid://dc5o30b1fag" path="res://Fonts/Chalkduster.ttf" id="3_vapd3"]
+[ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="4_5jqvl"]
+[ext_resource type="Texture2D" uid="uid://s3lalco578c4" path="res://Sprites/new color palette/UI/Logo (1).png" id="4_b3sf8"]
+[ext_resource type="AudioStream" uid="uid://gwiij4y1s684" path="res://Sounds/old-radio-button-click-97549.mp3" id="5_0q41i"]
+[ext_resource type="Texture2D" uid="uid://cphsebbnjaqm0" path="res://Sprites/new color palette/UI/Star.png" id="5_brg6b"]
+[ext_resource type="AudioStream" uid="uid://det85fa3442du" path="res://Sounds/Hindu Song from the Opera 'Sadko'.mp3" id="8_h65i6"]
 
 [node name="Menu" type="Node2D"]
 texture_filter = 1
@@ -36,72 +23,51 @@ size_flags_vertical = 3
 [node name="road" type="Sprite2D" parent="HBoxContainer"]
 position = Vector2(0, 8.88178e-16)
 scale = Vector2(0.166667, 0.166512)
-texture = ExtResource("2_tl4al")
+texture = ExtResource("2_3so2u")
 centered = false
 
-[node name="Start_Button" type="TextureButton" parent="."]
-offset_left = 167.167
-offset_top = 113.833
-offset_right = 295.167
-offset_bottom = 161.833
-texture_normal = ExtResource("2")
-texture_pressed = ExtResource("2")
-texture_hover = ExtResource("3")
-
-[node name="HSlider" type="HSlider" parent="."]
-visible = false
-offset_left = 256.0
-offset_top = 8.0
-offset_right = 312.0
-offset_bottom = 24.0
-theme_override_icons/grabber = ExtResource("8")
-theme_override_icons/grabber_highlight = ExtResource("7")
-theme_override_styles/slider = SubResource("1")
-theme_override_styles/grabber_area = SubResource("2")
-theme_override_styles/grabber_area_highlight = SubResource("2")
-max_value = 1.0
-step = 0.05
-value = 1.0
-
-[node name="Label" type="Label" parent="."]
-visible = false
+[node name="Play" type="LinkButton" parent="."]
 texture_filter = 1
-offset_left = 216.0
-offset_top = 8.0
-offset_right = 256.0
-offset_bottom = 22.0
-theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
-theme_override_fonts/font = ExtResource("4")
-text = "sound"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 51.6667
+offset_top = 105.0
+offset_right = 96.6667
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.870588, 0.796078, 0.662745, 1)
+theme_override_fonts/font = ExtResource("3_vapd3")
+theme_override_font_sizes/font_size = 12
+text = "> Play"
+script = ExtResource("4_5jqvl")
+scene_to_load = "Prologue"
 
-[node name="Label2" type="Label" parent="."]
-visible = false
+[node name="ButtonClickPlayer" type="AudioStreamPlayer2D" parent="Play"]
+stream = ExtResource("5_0q41i")
+
+[node name="Exit" type="LinkButton" parent="."]
 texture_filter = 1
-offset_left = 96.0
-offset_top = 160.0
-offset_right = 232.0
-offset_bottom = 174.0
-theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
-theme_override_fonts/font = ExtResource("4")
-text = "controls: arrows/wasd"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 51.6667
+offset_top = 126.0
+offset_right = 96.6667
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(0.870588, 0.796078, 0.662745, 1)
+theme_override_fonts/font = ExtResource("3_vapd3")
+theme_override_font_sizes/font_size = 12
+text = "> Exit"
 
-[node name="TextureButton" type="TextureButton" parent="."]
-visible = false
-offset_left = 259.728
-offset_top = 24.712
-offset_right = 307.728
-offset_bottom = 42.712
-texture_normal = ExtResource("9")
-texture_pressed = ExtResource("9")
-texture_hover = ExtResource("10")
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(160.583, 89.4167)
+scale = Vector2(0.166406, 0.166512)
+texture = ExtResource("4_b3sf8")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TextureButton"]
-stream = ExtResource("11")
+[node name="Star" type="Sprite2D" parent="."]
+position = Vector2(169.667, 99.1667)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("5_brg6b")
 
-[connection signal="button_down" from="Start_Button" to="." method="_on_Start_Button_button_down"]
-[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_h65i6")
+autoplay = true
+
+[connection signal="pressed" from="Play" to="Play" method="_on_play_pressed"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

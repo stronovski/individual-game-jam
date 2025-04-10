@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqm324vve12k2"]
+
+[ext_resource type="Texture2D" uid="uid://cphsebbnjaqm0" path="res://Sprites/new color palette/UI/Star.png" id="1_yhhh7"]
+[ext_resource type="Script" path="res://Scripts/Star.gd" id="2_14opa"]
+
+[node name="Star" type="Sprite2D"]
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("1_yhhh7")
+script = ExtResource("2_14opa")
