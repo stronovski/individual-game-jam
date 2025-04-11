@@ -1,0 +1,239 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx12ncmje8boy"]
+
+[ext_resource type="PackedScene" uid="uid://bxuwms7d281tv" path="res://Scenes/KeyboardButton.tscn" id="1_nfbye"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="1" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(35.5, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "1"
+
+[node name="2" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(59.4999, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "2"
+
+[node name="3" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(83.5, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "3"
+
+[node name="4" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(107.5, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "4"
+
+[node name="5" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(131.5, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "5"
+
+[node name="6" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(155.5, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "6"
+
+[node name="7" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(179.333, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "7"
+
+[node name="8" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(203.333, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "8"
+
+[node name="9" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(227.333, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "9"
+
+[node name="0" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(251.333, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "0"
+
+[node name="Unclickable7" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(275.333, 104.833)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Unclickable6" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(23.1667, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Q" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(47.1666, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "q"
+
+[node name="W" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(71.1667, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "w"
+
+[node name="E" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(95.1667, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "e"
+
+[node name="R" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(119.167, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "r"
+
+[node name="T" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(143.167, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "t"
+
+[node name="Y" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(167, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "y"
+
+[node name="U" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(191, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "u"
+
+[node name="I" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(215, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "i"
+
+[node name="O" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(239, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "o"
+
+[node name="P" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(263, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "p"
+
+[node name="Unclickable11" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(287, 119.667)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Unclickable5" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(26, 136)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="A" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(50, 136)
+scale = Vector2(0.17, 0.17)
+
+[node name="S" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(74, 136)
+scale = Vector2(0.17, 0.17)
+letter = "s"
+
+[node name="D" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(98, 136)
+scale = Vector2(0.17, 0.17)
+letter = "d"
+
+[node name="F" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(122, 136)
+scale = Vector2(0.17, 0.17)
+letter = "f"
+
+[node name="G" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(146, 136)
+scale = Vector2(0.17, 0.17)
+letter = "g"
+
+[node name="H" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(169.833, 136)
+scale = Vector2(0.17, 0.17)
+letter = "h"
+
+[node name="J" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(193.833, 136)
+scale = Vector2(0.17, 0.17)
+letter = "j"
+
+[node name="K" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(217.833, 136)
+scale = Vector2(0.17, 0.17)
+letter = "k"
+
+[node name="L" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(241.833, 136)
+scale = Vector2(0.17, 0.17)
+letter = "l"
+
+[node name="Unclickable8" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(265.833, 136)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Unclickable9" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(289.833, 136)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Unclickable1" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(37, 150)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Z" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(61, 150)
+scale = Vector2(0.17, 0.17)
+letter = "z"
+
+[node name="X" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(85, 150)
+scale = Vector2(0.17, 0.17)
+letter = "x"
+
+[node name="C" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(109, 150)
+scale = Vector2(0.17, 0.17)
+letter = "c"
+
+[node name="V" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(133, 150)
+scale = Vector2(0.17, 0.17)
+letter = "v"
+
+[node name="B" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(157, 150)
+scale = Vector2(0.17, 0.17)
+letter = "b"
+
+[node name="N" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(180.833, 150)
+scale = Vector2(0.17, 0.17)
+letter = "n"
+
+[node name="M" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(204.833, 150)
+scale = Vector2(0.17, 0.17)
+letter = "m"
+
+[node name="Unclickable2" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(228.833, 150)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Unclickable3" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(252.833, 150)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Unclickable4" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(276.833, 150)
+scale = Vector2(0.17, 0.17)
+letter = "unclickable"
+
+[node name="Unclickable10" parent="." instance=ExtResource("1_nfbye")]
+position = Vector2(160.333, 166)
+scale = Vector2(0.17, 0.17)
+letter = "space"

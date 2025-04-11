@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1dwxeeiakxhm"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bu0vkxkeywpjc" path="res://Sprites/new color palette/UI/Main Menu New.png" id="2_3so2u"]
+[ext_resource type="FontFile" uid="uid://dc5o30b1fag" path="res://Fonts/Chalkduster.ttf" id="3_vapd3"]
+[ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="4_5jqvl"]
+[ext_resource type="Texture2D" uid="uid://s3lalco578c4" path="res://Sprites/new color palette/UI/Logo (1).png" id="4_b3sf8"]
+[ext_resource type="AudioStream" uid="uid://gwiij4y1s684" path="res://Sounds/old-radio-button-click-97549.mp3" id="5_0q41i"]
+[ext_resource type="Texture2D" uid="uid://cphsebbnjaqm0" path="res://Sprites/new color palette/UI/Star.png" id="5_brg6b"]
+[ext_resource type="PackedScene" uid="uid://bcu5gvr3bqk2o" path="res://Scenes/Transition.tscn" id="6_l18x8"]
+[ext_resource type="AudioStream" uid="uid://det85fa3442du" path="res://Sounds/Hindu Song from the Opera 'Sadko'.mp3" id="8_h65i6"]
+
+[node name="Menu" type="Node2D"]
+texture_filter = 1
+scale = Vector2(6, 6)
+script = ExtResource("1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 321.0
+offset_bottom = 180.0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="road" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(0, 8.88178e-16)
+scale = Vector2(0.166667, 0.166512)
+texture = ExtResource("2_3so2u")
+centered = false
+
+[node name="Play" type="LinkButton" parent="."]
+texture_filter = 1
+offset_left = 51.6667
+offset_top = 105.0
+offset_right = 96.6667
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.870588, 0.796078, 0.662745, 1)
+theme_override_fonts/font = ExtResource("3_vapd3")
+theme_override_font_sizes/font_size = 12
+text = "> Play"
+script = ExtResource("4_5jqvl")
+
+[node name="ButtonClickPlayer" type="AudioStreamPlayer2D" parent="Play"]
+stream = ExtResource("5_0q41i")
+
+[node name="Exit" type="LinkButton" parent="."]
+texture_filter = 1
+offset_left = 51.6667
+offset_top = 126.0
+offset_right = 96.6667
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(0.870588, 0.796078, 0.662745, 1)
+theme_override_fonts/font = ExtResource("3_vapd3")
+theme_override_font_sizes/font_size = 12
+text = "> Exit"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(160.583, 89.4167)
+scale = Vector2(0.166406, 0.166512)
+texture = ExtResource("4_b3sf8")
+
+[node name="Star" type="Sprite2D" parent="."]
+position = Vector2(169.667, 99.1667)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("5_brg6b")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_h65i6")
+autoplay = true
+
+[node name="Transition" parent="." instance=ExtResource("6_l18x8")]
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

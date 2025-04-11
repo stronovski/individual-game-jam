@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://bxuwms7d281tv"]
+
+[ext_resource type="Script" path="res://Scripts/KeyboardButton.gd" id="1_q3vl5"]
+[ext_resource type="Texture2D" uid="uid://bkwr5vx17j4kg" path="res://Sprites/new color palette/Buttons/button_normal.png" id="2_qrmb7"]
+[ext_resource type="Texture2D" uid="uid://cx73bjkgaqkcx" path="res://Sprites/new color palette/Buttons/button_clicked.png" id="3_ixjl5"]
+[ext_resource type="Texture2D" uid="uid://b6np4vnst2y81" path="res://Sprites/new color palette/Buttons/button_unclickable.png" id="4_txcan"]
+[ext_resource type="Texture2D" uid="uid://krv3vktvxlst" path="res://Sprites/new color palette/Buttons/space_normal.png" id="5_yvjj8"]
+[ext_resource type="Texture2D" uid="uid://df2juj1swvf6" path="res://Sprites/new color palette/Buttons/space_clicked.png" id="6_fjjgj"]
+[ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="7_8exei"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m5hwp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qrmb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ixjl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_txcan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yvjj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fjjgj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="KeyboardButton" type="Node2D"]
+script = ExtResource("1_q3vl5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_m5hwp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -91.0
+offset_top = -39.0
+offset_right = 91.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0.211765, 0.211765, 0.211765, 1)
+theme_override_fonts/font = ExtResource("7_8exei")
+theme_override_font_sizes/font_size = 50
+text = "A"
+horizontal_alignment = 1

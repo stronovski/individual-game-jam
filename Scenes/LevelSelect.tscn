@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6xrlk1hkfgbc"]
+
+[ext_resource type="Script" path="res://Scripts/LevelSelect.gd" id="1_cf0yn"]
+[ext_resource type="AudioStream" uid="uid://dd1bpcab6abgh" path="res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio) copy.mp3" id="2_gydll"]
+[ext_resource type="Texture2D" uid="uid://daxskl4m07x4d" path="res://Sprites/new color palette/Background/Death With Dignity.png" id="2_r6wg7"]
+[ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="3_3slxg"]
+[ext_resource type="FontFile" uid="uid://dc5o30b1fag" path="res://Fonts/Chalkduster.ttf" id="4_kk3m4"]
+[ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="5_70px4"]
+[ext_resource type="AudioStream" uid="uid://gwiij4y1s684" path="res://Sounds/old-radio-button-click-97549.mp3" id="6_cp23x"]
+[ext_resource type="PackedScene" uid="uid://bcu5gvr3bqk2o" path="res://Scenes/Transition.tscn" id="7_fqjlp"]
+
+[node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_cf0yn")
+
+[node name="DeathByDignityPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_gydll")
+autoplay = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_cp23x")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 321.0
+offset_bottom = 180.0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="road" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(0, 8.88178e-16)
+texture = ExtResource("2_r6wg7")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 283.0
+offset_top = 158.0
+offset_right = 869.0
+offset_bottom = 381.0
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 100
+text = "Death with
+Dignity"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 290.0
+offset_top = 380.0
+offset_right = 865.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0.500993, 0.33406, 0.225939, 1)
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 60
+text = "Sufjan Stevens"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="WriteButton" type="LinkButton" parent="."]
+offset_left = 420.0
+offset_top = 755.0
+offset_right = 801.0
+offset_bottom = 885.0
+theme_override_colors/font_color = Color(0.176471, 0.176471, 0.176471, 1)
+theme_override_fonts/font = ExtResource("4_kk3m4")
+theme_override_font_sizes/font_size = 70
+text = "> Write"
+script = ExtResource("5_70px4")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 224.0
+offset_top = 521.0
+offset_right = 952.0
+offset_bottom = 705.0
+theme_override_colors/font_color = Color(0.56, 0.39928, 0.3304, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 35
+text = "A note, Lingering in the draft.
+Words left unspoken to
+the bringer of her existence
+from the very start."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Transition" parent="." instance=ExtResource("7_fqjlp")]
+
+[connection signal="pressed" from="WriteButton" to="." method="_on_write_button_pressed"]

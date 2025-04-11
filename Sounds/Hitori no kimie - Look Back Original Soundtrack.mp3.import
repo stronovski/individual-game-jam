@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwmorcd67luun"
+path="res://.godot/imported/Hitori no kimie - Look Back Original Soundtrack.mp3-2e887b5f9b49ff69b630d0994707ac4d.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Hitori no kimie - Look Back Original Soundtrack.mp3"
+dest_files=["res://.godot/imported/Hitori no kimie - Look Back Original Soundtrack.mp3-2e887b5f9b49ff69b630d0994707ac4d.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

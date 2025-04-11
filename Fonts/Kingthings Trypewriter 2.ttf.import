@@ -1,0 +1,39 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bukql8xvwdedr"
+path="res://.godot/imported/Kingthings Trypewriter 2.ttf-6078df23aa89d60b71a29e2859962991.fontdata"
+
+[deps]
+
+source_file="res://Fonts/Kingthings Trypewriter 2.ttf"
+dest_files=["res://.godot/imported/Kingthings Trypewriter 2.ttf-6078df23aa89d60b71a29e2859962991.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=true
+msdf_pixel_range=1
+msdf_size=100
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
+language_support={}
+script_support={}
+opentype_features={}

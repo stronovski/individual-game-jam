@@ -1,0 +1,457 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_fyv5d"]
+
+[resource]
+script = ExtResource("1_fyv5d")
+using_states = PackedStringArray()
+titles = {
+"start": "1"
+}
+character_names = PackedStringArray("Nini", "Stranger", "Registrar", "Nathan")
+first_title = "0"
+lines = {
+"0": {
+"id": "0",
+"next_id": "1",
+"type": "title"
+},
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "The cold air is thick with mist, shifting the wings of the seagulls back and forth along the docks.",
+"type": "dialogue"
+},
+"10": {
+"character": "Nini",
+"id": "10",
+"next_id": "11",
+"text": "It's so crowded... I can barely catch a breath! Not that breathing matters anymore, anyway...",
+"type": "dialogue"
+},
+"11": {
+"id": "11",
+"next_id": "12",
+"text": "Not too far from her, a gap opens in the throng. A quaint little ship sways along the rising tides, its gangplank lined with flickering yellow lanterns. Upon seeing the sight, something tugs at her chest, ultimately leading her feet forward.",
+"type": "dialogue"
+},
+"12": {
+"id": "12",
+"next_id": "13",
+"text": "At the base of the gangplank, a figure stands towering over a weathered desk, quill in hand. Their face is neither young nor old, their soft lashes touching their pale skin kissingly. Embraced in their hand is a long, worn-out scroll with names glowing and fading in an instant.",
+"type": "dialogue"
+},
+"13": {
+"id": "13",
+"next_id": "14",
+"text": "Seems that they have been doing their job for a long, long time.",
+"type": "dialogue"
+},
+"14": {
+"character": "Registrar",
+"id": "14",
+"next_id": "15",
+"text": "(without looking up) Name?",
+"type": "dialogue"
+},
+"15": {
+"character": "Nini",
+"id": "15",
+"next_id": "16",
+"text": "Ah... it's Nini, si- er mad- er, yes.",
+"type": "dialogue"
+},
+"16": {
+"id": "16",
+"next_id": "17",
+"text": "The Registrar’s quill pauses. They finally lift their gaze.",
+"type": "dialogue"
+},
+"17": {
+"character": "Registrar",
+"id": "17",
+"next_id": "18",
+"text": "It seems that you have come early.",
+"type": "dialogue"
+},
+"18": {
+"character": "Nini",
+"id": "18",
+"next_id": "19",
+"text": "Early? No... that should be mistake.",
+"type": "dialogue"
+},
+"19": {
+"character": "Registrar",
+"id": "19",
+"next_id": "20",
+"text": "No mistake. You walked here yourself. No tide brought you. No illness, no accident. You chose the path yourself.",
+"type": "dialogue"
+},
+"2": {
+"id": "2",
+"next_id": "3",
+"text": "Lanterns flicker underneath the glow of twinkling stars, their luminance casting long shadows of the crowd. Some weeping, some losing their temper, all clinging to reasons Nini can’t remember anymore.",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"next_id": "21",
+"text": "Nini looks down at her hands. They’re pretty clean. She thought there’d be blood. Hadn’t there been blood? Maybe not, but her hair does smell like the sea. Not that it matters anyway, it’s hard to recall.",
+"type": "dialogue"
+},
+"21": {
+"character": "Nini",
+"id": "21",
+"next_id": "22",
+"text": "Oh... Right.",
+"type": "dialogue"
+},
+"22": {
+"character": "Registrar",
+"id": "22",
+"next_id": "23",
+"text": "Your time has not come yet, please come back when it is time for you to board.",
+"type": "dialogue"
+},
+"23": {
+"character": "Nini",
+"id": "23",
+"next_id": "24",
+"text": "It's too late for that, though. I don't think there's any place left for me on earth, anyway...",
+"type": "dialogue"
+},
+"24": {
+"id": "24",
+"next_id": "25",
+"text": "The Registrar exhales a little bit of air, their pale forehead forms defined wrinkles, as if weighing something unseen.",
+"type": "dialogue"
+},
+"25": {
+"character": "Registrar",
+"id": "25",
+"next_id": "26",
+"text": "Do you know how this works?",
+"type": "dialogue"
+},
+"26": {
+"id": "26",
+"next_id": "27",
+"text": "Nini says nothing. The Registrar continues, voice even. Not lecturing, just stating facts.",
+"type": "dialogue"
+},
+"27": {
+"character": "Registrar",
+"id": "27",
+"next_id": "28",
+"text": "This harbor is for those who were called. Illness. Time. Accident. Their ships arrive when it’s their turn. But you? You whispered your own name into the dark. That changes how things work.",
+"type": "dialogue"
+},
+"28": {
+"character": "Registrar",
+"id": "28",
+"next_id": "29",
+"text": "We may be able to arrange some exceptions for you, but you are required to finish your unfinished business before departing.",
+"type": "dialogue"
+},
+"29": {
+"id": "29",
+"next_id": "30",
+"text": "Nini tilts her head, confused. She has chosen this path, after all. What is left there to finish?",
+"type": "dialogue"
+},
+"3": {
+"id": "3",
+"next_id": "4",
+"text": "Whatever their reason to be here, Nini's is written in the hollow of her ribs, where her heartbeat should've been.",
+"type": "dialogue"
+},
+"30": {
+"character": "Nini",
+"id": "30",
+"next_id": "31",
+"text": "Unfinished business? I'm pretty sure all has been settled down the moment i wake up here.",
+"type": "dialogue"
+},
+"31": {
+"character": "Registrar",
+"id": "31",
+"next_id": "32",
+"text": "Self-chosen departures mean unfinished business, child.",
+"type": "dialogue"
+},
+"32": {
+"character": "Registrar",
+"id": "32",
+"next_id": "33",
+"text": "You think your absence is a blank space. It isn’t. It’s a shape others keep stumbling over. The trails of footsteps you left walked among others, whether you meant it or not.",
+"type": "dialogue"
+},
+"33": {
+"character": "Registrar",
+"id": "33",
+"next_id": "34",
+"text": "You may have ceased to breathe now, but your life... it still lives in the quiet places, in the way someone still sets out an extra plate at the table for you, just in case. You are written in someone's song.",
+"type": "dialogue"
+},
+"34": {
+"id": "34",
+"next_id": "35",
+"text": "A pause. The distant cry of a gull.",
+"type": "dialogue"
+},
+"35": {
+"character": "Registrar",
+"id": "35",
+"next_id": "36",
+"text": "Love isn’t erased by a single choice. Only... left waiting. Unanswered.",
+"type": "dialogue"
+},
+"36": {
+"character": "Registrar",
+"id": "36",
+"next_id": "37",
+"text": "I wouldn't call that a finished business, if I were you.",
+"type": "dialogue"
+},
+"37": {
+"id": "37",
+"next_id": "38",
+"text": "The Registrar slides the parchment forward. The first blank page already bears faint impressions—like fingerprints in dust.",
+"type": "dialogue"
+},
+"38": {
+"character": "Registrar",
+"id": "38",
+"next_id": "39",
+"text": "Though this may not be able to revert what's irreversible, you still ought to bide them a proper farewell.",
+"type": "dialogue"
+},
+"39": {
+"id": "39",
+"next_id": "40",
+"text": "Nini pauses, her gaze longing with resignation",
+"type": "dialogue"
+},
+"4": {
+"id": "4",
+"next_id": "5",
+"text": "The windy air gushes to Nini's eyes, frolicking tiny specks of stardust behind her empty, thousand yard gaze. Her eyelids are rigid, refusing to blink (does she need to, now?)",
+"type": "dialogue"
+},
+"40": {
+"character": "Nini",
+"id": "40",
+"next_id": "41",
+"text": "...What if I don’t have anything to say?",
+"type": "dialogue"
+},
+"41": {
+"character": "Registrar",
+"id": "41",
+"next_id": "42",
+"text": "Then you’ll stand there forever, holding your blank paper. But, I think you do.",
+"type": "dialogue"
+},
+"42": {
+"character": "Registrar",
+"id": "42",
+"next_id": "43",
+"text": "I might be a mere registrar, yet I’ve seen enough to recognize the weight of unwritten words, and your gaze tells me everything I need to know.",
+"type": "dialogue"
+},
+"43": {
+"character": "Nini",
+"id": "43",
+"next_id": "44",
+"text": "...How will I know when I’m done?",
+"type": "dialogue"
+},
+"44": {
+"character": "Registrar",
+"id": "44",
+"next_id": "45",
+"text": "Oh, you’ll know.",
+"type": "dialogue"
+},
+"45": {
+"character": "Registrar",
+"id": "45",
+"next_id": "50",
+"text": "Go. The sea will wait for you, but not forever.",
+"type": "dialogue"
+},
+"46": {
+"id": "46",
+"next_id": "50",
+"type": ""
+},
+"5": {
+"character": "Nini",
+"id": "5",
+"next_id": "6",
+"text": "Excuse me, do you happen to know this ship? I--",
+"type": "dialogue"
+},
+"50": {
+"character": "Nini",
+"id": "50",
+"next_id": "51",
+"text": "[[Hi|Hello|Howdy]], this is some dialogue.",
+"type": "dialogue"
+},
+"51": {
+"character": "Nathan",
+"id": "51",
+"next_id": "52",
+"text": "Here are some choices.",
+"type": "dialogue"
+},
+"52": {
+"id": "52",
+"next_id": "53",
+"responses": PackedStringArray("52", "54", "56", "57"),
+"text": "First one",
+"type": "response"
+},
+"53": {
+"character": "Nathan",
+"id": "53",
+"next_id": "58",
+"text": "You picked the first one.",
+"type": "dialogue"
+},
+"54": {
+"id": "54",
+"next_id": "55",
+"text": "Second one",
+"type": "response"
+},
+"55": {
+"character": "Nathan",
+"id": "55",
+"next_id": "58",
+"text": "You picked the second one.",
+"type": "dialogue"
+},
+"56": {
+"id": "56",
+"next_id": "1",
+"text": "Start again",
+"type": "response"
+},
+"57": {
+"id": "57",
+"next_id": "end",
+"text": "End the conversation",
+"type": "response"
+},
+"58": {
+"character": "Nathan",
+"id": "58",
+"next_id": "59",
+"text": "For more information see the online documentation.",
+"type": "dialogue"
+},
+"59": {
+"id": "59",
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
+},
+"6": {
+"character": "Stranger",
+"id": "6",
+"next_id": "7",
+"text": "Sorry, I'm in a bit of a hurry right now.",
+"type": "dialogue"
+},
+"60": {
+"id": "60",
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
+},
+"7": {
+"id": "7",
+"next_id": "8",
+"text": "The stranger scruffles hurriedly without looking back, pushing Nini's small stature to the side of the sidewalk.",
+"type": "dialogue"
+},
+"8": {
+"character": "Nini",
+"id": "8",
+"next_id": "9",
+"text": "Urk, I couldn't even get a chance to properly say anything...",
+"type": "dialogue"
+},
+"9": {
+"id": "9",
+"next_id": "10",
+"text": "A child darts past all by himself, laughing, trailing a scarf that smells of the sea. Must've fallen victim to the unforgiving tides of the ocean, she muttered to herself.",
+"type": "dialogue"
+}
+}
+raw_text = "~ start
+The cold air is thick with mist, shifting the wings of the seagulls back and forth along the docks.
+Lanterns flicker underneath the glow of twinkling stars, their luminance casting long shadows of the crowd. Some weeping, some losing their temper, all clinging to reasons Nini can’t remember anymore.
+Whatever their reason to be here, Nini's is written in the hollow of her ribs, where her heartbeat should've been.
+The windy air gushes to Nini's eyes, frolicking tiny specks of stardust behind her empty, thousand yard gaze. Her eyelids are rigid, refusing to blink (does she need to, now?)
+Nini: Excuse me, do you happen to know this ship? I--
+Stranger: Sorry, I'm in a bit of a hurry right now.
+The stranger scruffles hurriedly without looking back, pushing Nini's small stature to the side of the sidewalk.
+Nini: Urk, I couldn't even get a chance to properly say anything...
+A child darts past all by himself, laughing, trailing a scarf that smells of the sea. Must've fallen victim to the unforgiving tides of the ocean, she muttered to herself.
+Nini: It's so crowded... I can barely catch a breath! Not that breathing matters anymore, anyway...
+Not too far from her, a gap opens in the throng. A quaint little ship sways along the rising tides, its gangplank lined with flickering yellow lanterns. Upon seeing the sight, something tugs at her chest, ultimately leading her feet forward.
+At the base of the gangplank, a figure stands towering over a weathered desk, quill in hand. Their face is neither young nor old, their soft lashes touching their pale skin kissingly. Embraced in their hand is a long, worn-out scroll with names glowing and fading in an instant. 
+Seems that they have been doing their job for a long, long time.
+Registrar: (without looking up) Name?
+Nini: Ah... it's Nini, si- er mad- er, yes.
+The Registrar’s quill pauses. They finally lift their gaze.
+Registrar: It seems that you have come early.
+Nini: Early? No... that should be mistake.
+Registrar: No mistake. You walked here yourself. No tide brought you. No illness, no accident. You chose the path yourself.
+Nini looks down at her hands. They’re pretty clean. She thought there’d be blood. Hadn’t there been blood? Maybe not, but her hair does smell like the sea. Not that it matters anyway, it’s hard to recall.
+Nini: Oh... Right.
+Registrar: Your time has not come yet, please come back when it is time for you to board.
+Nini: It's too late for that, though. I don't think there's any place left for me on earth, anyway...
+The Registrar exhales a little bit of air, their pale forehead forms defined wrinkles, as if weighing something unseen.
+Registrar: Do you know how this works?
+Nini says nothing. The Registrar continues, voice even. Not lecturing, just stating facts.
+Registrar: This harbor is for those who were called. Illness. Time. Accident. Their ships arrive when it’s their turn. But you? You whispered your own name into the dark. That changes how things work.
+Registrar: We may be able to arrange some exceptions for you, but you are required to finish your unfinished business before departing.
+Nini tilts her head, confused. She has chosen this path, after all. What is left there to finish?
+Nini: Unfinished business? I'm pretty sure all has been settled down the moment i wake up here.
+Registrar: Self-chosen departures mean unfinished business, child.
+Registrar: You think your absence is a blank space. It isn’t. It’s a shape others keep stumbling over. The trails of footsteps you left walked among others, whether you meant it or not. 
+Registrar: You may have ceased to breathe now, but your life... it still lives in the quiet places, in the way someone still sets out an extra plate at the table for you, just in case. You are written in someone's song.
+A pause. The distant cry of a gull.
+Registrar: Love isn’t erased by a single choice. Only... left waiting. Unanswered.
+Registrar: I wouldn't call that a finished business, if I were you.
+The Registrar slides the parchment forward. The first blank page already bears faint impressions—like fingerprints in dust.
+Registrar: Though this may not be able to revert what's irreversible, you still ought to bide them a proper farewell.
+Nini pauses, her gaze longing with resignation
+Nini: ...What if I don’t have anything to say?
+Registrar: Then you’ll stand there forever, holding your blank paper. But, I think you do.
+Registrar: I might be a mere registrar, yet I’ve seen enough to recognize the weight of unwritten words, and your gaze tells me everything I need to know.
+Nini: ...How will I know when I’m done?
+Registrar: Oh, you’ll know.
+Registrar: Go. The sea will wait for you, but not forever.
+
+
+
+
+Nini: [[Hi|Hello|Howdy]], this is some dialogue.
+Nathan: Here are some choices.
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END"
+metadata/dialogue_manager_version = "3.3.3"
