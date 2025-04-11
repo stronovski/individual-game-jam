@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_e1ygt"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_u14p1"]
 
 [resource]
-script = ExtResource("1_e1ygt")
+script = ExtResource("1_u14p1")
 using_states = PackedStringArray()
 titles = {
+"epilogue": "53",
 "start": "1"
 }
 character_names = PackedStringArray("Nini", "Stranger", "The Registrar")
@@ -84,7 +85,7 @@ lines = {
 "character": "Nini",
 "id": "19",
 "next_id": "20",
-"text": "Early? No... that should be mistake.",
+"text": "Early? No... that must be mistake.",
 "type": "dialogue"
 },
 "2": {
@@ -322,10 +323,57 @@ lines = {
 },
 "51": {
 "id": "51",
-"is_snippet": false,
-"next_id": "end",
-"next_id_after": "",
-"type": "goto"
+"next_id": "52",
+"type": ""
+},
+"52": {
+"id": "52",
+"next_id": "53",
+"type": "title"
+},
+"53": {
+"id": "53",
+"next_id": "54",
+"text": "The ship’s deck is quiet now. The other passengers have faded into thin air, leaving the once bustling harbour as silent as the night.",
+"type": "dialogue"
+},
+"54": {
+"id": "54",
+"next_id": "55",
+"text": "Nini sits alone, her last letter clasped between her cold fingers. The ink is dry. The words are spent.",
+"type": "dialogue"
+},
+"55": {
+"id": "55",
+"next_id": "56",
+"text": "The sea before her is still... as if waiting for her final farewell.",
+"type": "dialogue"
+},
+"56": {
+"character": "Nini",
+"id": "56",
+"next_id": "57",
+"text": "...there. It’s done.",
+"type": "dialogue"
+},
+"57": {
+"id": "57",
+"next_id": "58",
+"text": "The Registrar appears beside her, their scroll stretches with names that glows faintly, vividly pulsing like distant stars.",
+"type": "dialogue"
+},
+"58": {
+"character": "The Registrar",
+"id": "58",
+"next_id": "59",
+"text": "Are you certain?",
+"type": "dialogue"
+},
+"59": {
+"id": "59",
+"next_id": "60",
+"text": "Nini looks down at the final letter in her hands. The paper is worn at the edges, as if handled many times by hands that weren’t hers.",
+"type": "dialogue"
 },
 "6": {
 "character": "Stranger",
@@ -334,11 +382,120 @@ lines = {
 "text": "Sorry, I'm in a bit of a hurry right now.",
 "type": "dialogue"
 },
+"60": {
+"id": "60",
+"next_id": "61",
+"text": "She doesn’t remember writing half of it. The ink had bled the truth from her, pulling memories she’d buried deep.",
+"type": "dialogue"
+},
+"61": {
+"character": "Nini",
+"id": "61",
+"next_id": "62",
+"text": "Yes. I... I said everything, I think.",
+"type": "dialogue"
+},
+"62": {
+"id": "62",
+"next_id": "63",
+"text": "A pause. The Registrar studies her, their gaze weighing something unseen. Then, they nod.",
+"type": "dialogue"
+},
+"63": {
+"character": "The Registrar",
+"id": "63",
+"next_id": "64",
+"text": "Then it’s time.",
+"type": "dialogue"
+},
+"64": {
+"id": "64",
+"next_id": "65",
+"text": "Nini stands. The ship’s lanterns brighten, their yellow light deepening to gold.",
+"type": "dialogue"
+},
+"65": {
+"id": "65",
+"next_id": "66",
+"text": "The gangplank lifts itself, creaking like an old friend sighing in relief.",
+"type": "dialogue"
+},
+"66": {
+"id": "66",
+"next_id": "67",
+"text": "Somewhere, far behind her, she thinks she hears a vivid voice briefly kissing the tip of her ear, but the wind carries it away before she can be sure.",
+"type": "dialogue"
+},
+"67": {
+"character": "Nini",
+"id": "67",
+"next_id": "68",
+"text": "Will they... ever read them?",
+"type": "dialogue"
+},
+"68": {
+"id": "68",
+"next_id": "69",
+"text": "The Registrar doesn’t answer. Instead, they place a hand on her shoulder. It’s the first time they’ve touched her. Their soft, slender fingers are cold to the touch, yet filled with warmth.",
+"type": "dialogue"
+},
+"69": {
+"character": "The Registrar",
+"id": "69",
+"next_id": "70",
+"text": "That isn’t for you to worry about anymore.",
+"type": "dialogue"
+},
 "7": {
 "id": "7",
 "next_id": "8",
 "text": "The stranger scruffles hurriedly without looking back, pushing Nini's small stature to the side of the sidewalk.",
 "type": "dialogue"
+},
+"70": {
+"id": "70",
+"next_id": "71",
+"text": "The harbor shrinks slowly behind them. The mist curls over the water, swallowing the dock whole.",
+"type": "dialogue"
+},
+"71": {
+"character": "Nini",
+"id": "71",
+"next_id": "72",
+"text": "...Okay.",
+"type": "dialogue"
+},
+"72": {
+"id": "72",
+"next_id": "73",
+"text": "The ship sails on. The letters, stacked neatly on the deck, begin to glow until they dissolve into light, carried away on the wind.",
+"type": "dialogue"
+},
+"73": {
+"id": "73",
+"next_id": "74",
+"text": "Somewhere, in a world she no longer belongs to, a door creaks open. A page turns. A name is spoken.",
+"type": "dialogue"
+},
+"74": {
+"id": "74",
+"next_id": "75",
+"text": "But here, now, there is only the sea, the stars, and the quiet understanding that her journey is finally, truly, her own.",
+"type": "dialogue"
+},
+"75": {
+"id": "75",
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
+},
+"76": {
+"id": "76",
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
 },
 "8": {
 "character": "Nini",
@@ -373,7 +530,7 @@ The Registrar: (without looking up) Name?
 Nini: Ah... it's Nini, si- er mad- er, yes.
 The Registrar’s quill pauses. They finally lift their gaze.
 The Registrar: It seems that you have come early.
-Nini: Early? No... that should be mistake.
+Nini: Early? No... that must be mistake.
 The Registrar: No mistake. You walked here yourself. No tide brought you. No illness, no accident. You chose the path yourself.
 Nini looks down at her hands. They’re pretty clean. She thought there’d be blood. Hadn’t there been blood? Maybe not, but her hair does smell like the sea. 
 Does it matter anymore...? She thought. Her memory is as hazy as the morning mist.
@@ -404,5 +561,30 @@ Nini: ...How will I know when I’m done?
 The Registrar: Oh, you’ll know.
 The gangplank creaks under her weight. Behind her, the Registrar's voice follows like a tide.
 The Registrar: Go. The sea will wait for you, but not forever...
+=> END
+
+~ epilogue
+The ship’s deck is quiet now. The other passengers have faded into thin air, leaving the once bustling harbour as silent as the night. 
+Nini sits alone, her last letter clasped between her cold fingers. The ink is dry. The words are spent. 
+The sea before her is still... as if waiting for her final farewell.
+Nini: ...there. It’s done.
+The Registrar appears beside her, their scroll stretches with names that glows faintly, vividly pulsing like distant stars.
+The Registrar: Are you certain?
+Nini looks down at the final letter in her hands. The paper is worn at the edges, as if handled many times by hands that weren’t hers. 
+She doesn’t remember writing half of it. The ink had bled the truth from her, pulling memories she’d buried deep.
+Nini: Yes. I... I said everything, I think.
+A pause. The Registrar studies her, their gaze weighing something unseen. Then, they nod.
+The Registrar: Then it’s time.
+Nini stands. The ship’s lanterns brighten, their yellow light deepening to gold. 
+The gangplank lifts itself, creaking like an old friend sighing in relief.
+Somewhere, far behind her, she thinks she hears a vivid voice briefly kissing the tip of her ear, but the wind carries it away before she can be sure.
+Nini: Will they... ever read them?
+The Registrar doesn’t answer. Instead, they place a hand on her shoulder. It’s the first time they’ve touched her. Their soft, slender fingers are cold to the touch, yet filled with warmth.
+The Registrar: That isn’t for you to worry about anymore.
+The harbor shrinks slowly behind them. The mist curls over the water, swallowing the dock whole. 
+Nini: ...Okay.
+The ship sails on. The letters, stacked neatly on the deck, begin to glow until they dissolve into light, carried away on the wind.
+Somewhere, in a world she no longer belongs to, a door creaks open. A page turns. A name is spoken. 
+But here, now, there is only the sea, the stars, and the quiet understanding that her journey is finally, truly, her own.
 => END"
 metadata/dialogue_manager_version = "3.3.3"

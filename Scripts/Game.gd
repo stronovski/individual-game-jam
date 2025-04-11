@@ -123,6 +123,9 @@ func _on_Conductor_beat(position):
 		Global.good = good
 		Global.okay = okay
 		Global.missed = missed
+		
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
 		if get_tree().change_scene_to_file("res://Scenes/End.tscn") != OK:
 			print ("Error changing scene to End")
 

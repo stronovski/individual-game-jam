@@ -1,6 +1,6 @@
 6b83eef13f46d74bce552f92a480ef09
-::res://::1744311906
-default_env.tres::Environment::3936046334559004553::1744311906::0::1::::<><>::
+::res://::1744350023
+default_env.tres::Environment::3936046334559004553::1744350099::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1743259681::0::1::::<><>::
 icon.png::CompressedTexture2D::356530785270263926::1743259681::1743260086::1::::<><>::
 README.md::TextFile::-1::1743259681::0::1::::<><>::
@@ -78,23 +78,23 @@ dialogue_cache.gd::GDScript::-1::1744215327::0::1::::DMCache<>Node<>::
 ::res://addons/dialogue_manager/views/::1744230388
 main_view.gd::GDScript::-1::1744215328::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1744215328::0::1::::<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
-::res://DialogueBalloons/::1744311906
+::res://DialogueBalloons/::1744350022
 balloon.gd::GDScript::-1::1744296244::0::1::::<>CanvasLayer<>::
-balloon.tscn::PackedScene::7255049549059095913::1744311906::0::1::::<><>::res://DialogueBalloons/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://p5n6y41jt0aj::::res://Sprites/new color palette/Sprites/Nini.png<>res://addons/dialogue_manager/dialogue_responses_menu.gd<>uid://dc5o30b1fag::::res://Fonts/Chalkduster.ttf<>uid://cttg2a7ih3xaf::::res://Sounds/TypeWriter_Multiple_01/TypeWriter_Mutiple_v1_wav.wav
+balloon.tscn::PackedScene::7255049549059095913::1744350098::0::1::::<><>::res://DialogueBalloons/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://p5n6y41jt0aj::::res://Sprites/new color palette/Sprites/Nini.png<>res://addons/dialogue_manager/dialogue_responses_menu.gd<>uid://dc5o30b1fag::::res://Fonts/Chalkduster.ttf<>uid://cttg2a7ih3xaf::::res://Sounds/TypeWriter_Multiple_01/TypeWriter_Mutiple_v1_wav.wav
 CharacterSprite.gd::GDScript::-1::1744288824::0::1::::<>RefCounted<>::
-::res://Dialogues/::1744305708
-dialogue.dialogue::Resource::7639920816923462841::1744297282::1744305708::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+::res://Dialogues/::1744350024
+dialogue.dialogue::Resource::7639920816923462841::1744350096::1744350100::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 ::res://Export/::1743260086
 favicon.png::CompressedTexture2D::9168064429924517830::1743259684::1743260086::1::::<><>::
 index.png::CompressedTexture2D::3700135186349569423::1743259685::1743260086::1::::<><>::
 ::res://Export/cover/::1743260086
 cover.png::CompressedTexture2D::136431038992919926::1743259685::1743260086::1::::<><>::
-::res://Fonts/::1744304451
+::res://Fonts/::1744334167
 Chalkduster.ttf::FontFile::6368920784534426::1744302307::1744304451::1::::<><>::
 heartbit2x.tres::FontFile::-1::1743260072::0::1::::<><>::res://Fonts/HeartbitXX2Px.ttf
 HeartbitXX2Px.ttf::FontFile::5889344926270097521::1743259685::1743260086::1::::<><>::
 HeartbitXX.ttf::FontFile::5480650552603441180::1743259685::1743260086::1::::<><>::
-Kingthings Trypewriter 2.ttf::FontFile::3811834219396286047::1743845518::1743845546::1::::<><>::
+Kingthings Trypewriter 2.ttf::FontFile::3811834219396286047::1743845518::1744334167::1::::<><>::
 ManaFont.tres::FontFile::-1::1743260072::0::1::::<><>::res://Fonts/manaspc.ttf
 manaspc.ttf::FontFile::9110629227456432509::1743259685::1743260086::1::::<><>::
 TypewriterzDemoBold.ttf::FontFile::2884547232041545602::1743845968::1743846001::1::::<><>::
@@ -109,42 +109,47 @@ Camera2D.gd::GDScript::-1::1743260072::0::1::::<>Camera2D<>::
 Camera2D.tscn::PackedScene::-1::1743260072::0::1::::<><>::res://Plugins/Camera2D/Camera2D.gd
 ::res://Plugins/Scripts/::1743259685
 SimpleTopDownMovement.gd::GDScript::-1::1743260072::0::1::::<>CharacterBody2D<>::
-::res://Scenes/::1744311906
-ArrowButton.tscn::PackedScene::4906149125800919849::1744311905::0::1::::<><>::res://Scripts/ArrowButton.gd<>uid://cy48w6m1lsj0l::::res://Sprites/new color palette/UI/Judgement Line/JudgementLine_Clicked.png<>uid://sxdawkp3uj2v::::res://Sprites/new color palette/UI/Judgement Line/JudgementLine_normal.png
-Conductor.tscn::PackedScene::2463033680242902508::1744311905::0::1::::<><>::res://Scripts/Conductor.gd
-End.tscn::PackedScene::1204342142817356251::1744311905::0::1::::<><>::uid://bnop7i2g42grt::::res://Sprites/ui/play_again_button/play_again1.png<>uid://3h2l5ikfac88::::res://Sprites/ui/back_to_menu_button/back_to_menu2.png<>uid://cdi1w1f5pbsr1::::res://Sprites/ui/back_to_menu_button/back_to_menu1.png<>uid://433tre3advfn::::res://Sprites/ui/play_again_button/play_again2.png<>res://Fonts/heartbit2x.tres<>res://Scripts/End.gd
-Game.tscn::PackedScene::8181547965454816352::1744311905::0::1::::<><>::uid://cb5ttas53463n::::res://Scenes/ArrowButton.tscn<>uid://b5okq46gtfqxi::::res://Sprites/new color palette/Background/background_colpalnew.png<>res://Scripts/Game.gd<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf<>uid://bbdd2mohh0im3::::res://Scenes/Conductor.tscn<>uid://c5ymko851lsjx::::res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio).mp3<>uid://bx12ncmje8boy::::res://Scenes/KeyboardButtonCompiled.tscn<>uid://b4gwi8vqq5jmo::::res://Sprites/new color palette/Background/combo_background.png
-Global.tscn::PackedScene::5143347195676556900::1744311905::0::1::::<><>::res://Scripts/Global.gd
-KeyboardButton.tscn::PackedScene::4043409840844521371::1744311905::0::1::::<><>::res://Scripts/KeyboardButton.gd<>uid://bkwr5vx17j4kg::::res://Sprites/new color palette/Buttons/button_normal.png<>uid://cx73bjkgaqkcx::::res://Sprites/new color palette/Buttons/button_clicked.png<>uid://b6np4vnst2y81::::res://Sprites/new color palette/Buttons/button_unclickable.png<>uid://krv3vktvxlst::::res://Sprites/new color palette/Buttons/space_normal.png<>uid://df2juj1swvf6::::res://Sprites/new color palette/Buttons/space_clicked.png<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf
-KeyboardButtonCompiled.tscn::PackedScene::4056100607098774368::1744311906::0::1::::<><>::uid://bxuwms7d281tv::::res://Scenes/KeyboardButton.tscn
+::res://Scenes/::1744350023
+ArrowButton.tscn::PackedScene::4906149125800919849::1744350097::0::1::::<><>::res://Scripts/ArrowButton.gd<>uid://cy48w6m1lsj0l::::res://Sprites/new color palette/UI/Judgement Line/JudgementLine_Clicked.png<>uid://sxdawkp3uj2v::::res://Sprites/new color palette/UI/Judgement Line/JudgementLine_normal.png
+Conductor.tscn::PackedScene::2463033680242902508::1744350097::0::1::::<><>::res://Scripts/Conductor.gd
+End.tscn::PackedScene::1204342142817356251::1744350097::0::1::::<><>::uid://bnop7i2g42grt::::res://Sprites/ui/play_again_button/play_again1.png<>uid://3h2l5ikfac88::::res://Sprites/ui/back_to_menu_button/back_to_menu2.png<>uid://c4ujadffyamk3::::res://Sprites/new color palette/Background/EndBackground.png<>uid://cdi1w1f5pbsr1::::res://Sprites/ui/back_to_menu_button/back_to_menu1.png<>uid://433tre3advfn::::res://Sprites/ui/play_again_button/play_again2.png<>res://Scripts/End.gd<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf<>uid://dc5o30b1fag::::res://Fonts/Chalkduster.ttf<>uid://gwiij4y1s684::::res://Sounds/old-radio-button-click-97549.mp3
+Epilogue.tscn::PackedScene::474491608531239827::1744350099::0::1::::<><>::res://Scripts/Epilogue.gd<>uid://phsftv0x6ebm::::res://Sprites/new color palette/Background/The Docks.png<>uid://cwmorcd67luun::::res://Sounds/Hitori no kimie - Look Back Original Soundtrack.mp3<>uid://bcu5gvr3bqk2o::::res://Scenes/Transition.tscn
+Game.tscn::PackedScene::8181547965454816352::1744350097::0::1::::<><>::uid://cb5ttas53463n::::res://Scenes/ArrowButton.tscn<>uid://b5okq46gtfqxi::::res://Sprites/new color palette/Background/background_colpalnew.png<>res://Scripts/Game.gd<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf<>uid://bbdd2mohh0im3::::res://Scenes/Conductor.tscn<>uid://c5ymko851lsjx::::res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio).mp3<>uid://bx12ncmje8boy::::res://Scenes/KeyboardButtonCompiled.tscn<>uid://b4gwi8vqq5jmo::::res://Sprites/new color palette/Background/combo_background.png<>uid://bcu5gvr3bqk2o::::res://Scenes/Transition.tscn
+Global.tscn::PackedScene::5143347195676556900::1744350097::0::1::::<><>::res://Scripts/Global.gd
+KeyboardButton.tscn::PackedScene::4043409840844521371::1744350097::0::1::::<><>::res://Scripts/KeyboardButton.gd<>uid://bkwr5vx17j4kg::::res://Sprites/new color palette/Buttons/button_normal.png<>uid://cx73bjkgaqkcx::::res://Sprites/new color palette/Buttons/button_clicked.png<>uid://b6np4vnst2y81::::res://Sprites/new color palette/Buttons/button_unclickable.png<>uid://krv3vktvxlst::::res://Sprites/new color palette/Buttons/space_normal.png<>uid://df2juj1swvf6::::res://Sprites/new color palette/Buttons/space_clicked.png<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf
+KeyboardButtonCompiled.tscn::PackedScene::4056100607098774368::1744350098::0::1::::<><>::uid://bxuwms7d281tv::::res://Scenes/KeyboardButton.tscn
 LevelManager.gd::GDScript::-1::1744214569::0::1::::LevelManager<>Node<>::
-LevelSelect.tscn::PackedScene::4610807923155494628::1744311906::0::1::::<><>::res://Scripts/LevelSelect.gd<>uid://b5okq46gtfqxi::::res://Sprites/new color palette/Background/background_colpalnew.png<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf<>uid://bnop7i2g42grt::::res://Sprites/ui/play_again_button/play_again1.png<>uid://433tre3advfn::::res://Sprites/ui/play_again_button/play_again2.png<>uid://cdi1w1f5pbsr1::::res://Sprites/ui/back_to_menu_button/back_to_menu1.png<>uid://3h2l5ikfac88::::res://Sprites/ui/back_to_menu_button/back_to_menu2.png
-Menu.tscn::PackedScene::6605321498974419750::1744311905::0::1::::<><>::res://Scripts/Menu.gd<>uid://bu0vkxkeywpjc::::res://Sprites/new color palette/UI/Main Menu New.png<>uid://dc5o30b1fag::::res://Fonts/Chalkduster.ttf<>res://Scripts/PlayButton.gd<>uid://s3lalco578c4::::res://Sprites/new color palette/UI/Logo (1).png<>uid://gwiij4y1s684::::res://Sounds/old-radio-button-click-97549.mp3<>uid://cphsebbnjaqm0::::res://Sprites/new color palette/UI/Star.png<>uid://det85fa3442du::::res://Sounds/Hindu Song from the Opera 'Sadko'.mp3
-Note.tscn::PackedScene::1381187425677008456::1744311905::0::1::::<><>::uid://ceij3xl5o0x8c::::res://Sprites/game/particles/star.png<>uid://dc5o30b1fag::::res://Fonts/Chalkduster.ttf<>res://Scripts/Note.gd
-Prologue.tscn::PackedScene::9165043269351714894::1744311906::0::1::::<><>::res://Scripts/Prologue.gd<>uid://phsftv0x6ebm::::res://Sprites/new color palette/Background/The Docks.png<>uid://cwmorcd67luun::::res://Sounds/Hitori no kimie - Look Back Original Soundtrack.mp3
-Star.tscn::PackedScene::5922385247454920395::1744311906::0::1::::<><>::uid://cphsebbnjaqm0::::res://Sprites/new color palette/UI/Star.png<>res://Scripts/Star.gd
-test.tscn::PackedScene::4179537843424812888::1744311906::0::1::::<><>::uid://dbrk4ommpexn1::::res://Sprites/game/arrow_button/right/arrow_button_right2.png
-::res://Scripts/::1744310089
+LevelSelect.tscn::PackedScene::4610807923155494628::1744350098::0::1::::<><>::res://Scripts/LevelSelect.gd<>uid://dd1bpcab6abgh::::res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio) copy.mp3<>uid://daxskl4m07x4d::::res://Sprites/new color palette/Background/Death With Dignity.png<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf<>uid://dc5o30b1fag::::res://Fonts/Chalkduster.ttf<>res://Scripts/PlayButton.gd<>uid://gwiij4y1s684::::res://Sounds/old-radio-button-click-97549.mp3<>uid://bcu5gvr3bqk2o::::res://Scenes/Transition.tscn
+Menu.tscn::PackedScene::6605321498974419750::1744350097::0::1::::<><>::res://Scripts/Menu.gd<>uid://bu0vkxkeywpjc::::res://Sprites/new color palette/UI/Main Menu New.png<>uid://dc5o30b1fag::::res://Fonts/Chalkduster.ttf<>res://Scripts/PlayButton.gd<>uid://s3lalco578c4::::res://Sprites/new color palette/UI/Logo (1).png<>uid://gwiij4y1s684::::res://Sounds/old-radio-button-click-97549.mp3<>uid://cphsebbnjaqm0::::res://Sprites/new color palette/UI/Star.png<>uid://bcu5gvr3bqk2o::::res://Scenes/Transition.tscn<>uid://det85fa3442du::::res://Sounds/Hindu Song from the Opera 'Sadko'.mp3
+Note.tscn::PackedScene::1381187425677008456::1744350097::0::1::::<><>::uid://ceij3xl5o0x8c::::res://Sprites/game/particles/star.png<>uid://bukql8xvwdedr::::res://Fonts/Kingthings Trypewriter 2.ttf<>res://Scripts/Note.gd
+Prologue.tscn::PackedScene::9165043269351714894::1744350098::0::1::::<><>::res://Scripts/Prologue.gd<>uid://phsftv0x6ebm::::res://Sprites/new color palette/Background/The Docks.png<>uid://cwmorcd67luun::::res://Sounds/Hitori no kimie - Look Back Original Soundtrack.mp3<>uid://bcu5gvr3bqk2o::::res://Scenes/Transition.tscn
+Star.tscn::PackedScene::5922385247454920395::1744350098::0::1::::<><>::uid://cphsebbnjaqm0::::res://Sprites/new color palette/UI/Star.png<>res://Scripts/Star.gd
+test.tscn::PackedScene::4179537843424812888::1744350098::0::1::::<><>::uid://dbrk4ommpexn1::::res://Sprites/game/arrow_button/right/arrow_button_right2.png
+Transition.tscn::PackedScene::2569919281122982300::1744350098::0::1::::<><>::res://Scripts/Transition.gd
+::res://Scripts/::1744349910
 ArrowButton.gd::GDScript::-1::1744278775::0::1::::<>Node2D<>::
 Conductor.gd::GDScript::-1::1743260660::0::1::::<>AudioStreamPlayer<>::
-End.gd::GDScript::-1::1743260072::0::1::::<>Node2D<>::
-Game.gd::GDScript::-1::1744228643::0::1::::<>Node2D<>::
+End.gd::GDScript::-1::1744349910::0::1::::<>Node2D<>::
+Game.gd::GDScript::-1::1744341676::0::1::::<>Node2D<>::
 Global.gd::GDScript::-1::1744213440::0::1::::<>Node2D<>::
 KeyboardButton.gd::GDScript::-1::1744143769::0::1::::<>Node2D<>::
 LevelData.gd::GDScript::-1::1744214876::0::1::::LevelData<>Resource<>::
-LevelSelect.gd::GDScript::-1::1744214538::0::1::::<>Node2D<>::
-Menu.gd::GDScript::-1::1744309015::0::1::::<>Node2D<>::
+LevelSelect.gd::GDScript::-1::1744348605::0::1::::<>Node2D<>::
+Menu.gd::GDScript::-1::1744342420::0::1::::<>Node2D<>::
 Note.gd::GDScript::-1::1744144342::0::1::::<>Area2D<>::
-PlayButton.gd::GDScript::-1::1744310089::0::1::::<>LinkButton<>::
-Prologue.gd::GDScript::-1::1744286460::0::1::::<>Node2D<>::
+PlayButton.gd::GDScript::-1::1744335306::0::1::::<>LinkButton<>::
+Prologue.gd::GDScript::-1::1744342695::0::1::::<>Node2D<>::
+Epilogue.gd::GDScript::-1::1744349874::0::1::::<>Node2D<>::
 Star.gd::GDScript::-1::1744308318::0::1::::<>Sprite2D<>::
-::res://Sounds/::1744309303
+Transition.gd::GDScript::-1::1744340108::0::1::::<>CanvasLayer<>::
+::res://Sounds/::1744348730
 bell_ding.ogg::AudioStreamOggVorbis::2924627042980936489::1743259686::1743260086::1::::<><>::
 Hindu Song from the Opera 'Sadko'.mp3::AudioStreamMP3::7481298101465876126::1744309185::1744309303::1::::<><>::
 Hitori no kimie - Look Back Original Soundtrack.mp3::AudioStreamMP3::6342648967999576189::1744295148::1744295364::1::::<><>::
 old-radio-button-click-97549.mp3::AudioStreamMP3::467049913346298987::1744309122::1744309227::1::::<><>::
 song.ogg::AudioStreamOggVorbis::4742497212588780949::1743259686::1743260086::1::::<><>::
-Sufjan Stevens, Death With Dignity (Official Audio).mp3::AudioStreamMP3::6928798992180563465::1743593261::1743593339::1::::<><>::
+Sufjan Stevens, Death With Dignity (Official Audio) - Copy.mp3::AudioStreamMP3::6306605308002652591::1743593261::1744348701::1::::<><>::
+Sufjan Stevens, Death With Dignity (Official Audio) copy.mp3::AudioStreamMP3::7423590012633857895::1743593261::1744348730::1::::<><>::
 ::res://Sounds/BlackBoard_01/::1744293205
 BlackBoard_Multiple_v1_wav.wav::AudioStreamWAV::1560294966750570633::1744293195::1744293205::1::::<><>::
 BlackBoard_Multiple_v2_wav.wav::AudioStreamWAV::4995809480870258289::1744293195::1744293205::1::::<><>::
@@ -319,10 +324,11 @@ button_unclickable.png::CompressedTexture2D::1102016978779901277::1743852147::17
 space_clicked.png::CompressedTexture2D::3565635774804008060::1743852147::1743852155::1::::<><>::
 space_normal.png::CompressedTexture2D::3163107665855247201::1743852147::1743852155::1::::<><>::
 ::res://Sprites/new color palette/::1744279283
-::res://Sprites/new color palette/Background/::1744313846
+::res://Sprites/new color palette/Background/::1744346307
 background_colpalnew.png::CompressedTexture2D::4521624595385362222::1744143205::1744143322::1::::<><>::
 combo_background.png::CompressedTexture2D::4435635242373485818::1744144003::1744144008::1::::<><>::
 Death With Dignity.png::CompressedTexture2D::7207854126367621769::1744313759::1744313850::1::::<><>::
+EndBackground.png::CompressedTexture2D::6850152006458570880::1744346250::1744346307::1::::<><>::
 Main Menu.png::CompressedTexture2D::7768076986926082439::1744227377::1744227440::1::::<><>::
 The Docks.png::CompressedTexture2D::1068386165240614918::1744279226::1744279296::1::::<><>::
 ::res://Sprites/new color palette/Buttons/::1744143494

@@ -16,3 +16,10 @@ res://Scenes/Prologue.tscn
 res://Scenes/Star.tscn
 res://Scripts/Prologue.gd
 res://Scripts/LevelSelect.gd
+res://Scenes/Transition.tscn
+res://Scripts/Transition.gd
+res://Scripts/Menu.gd
+res://Scripts/Game.gd
+res://Scripts/End.gd
+res://Scripts/Epilogue.gd
+res://Scenes/Epilogue.tscn

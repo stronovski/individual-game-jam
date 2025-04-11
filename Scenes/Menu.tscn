@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1dwxeeiakxhm"]
+[gd_scene load_steps=10 format=3 uid="uid://c1dwxeeiakxhm"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bu0vkxkeywpjc" path="res://Sprites/new color palette/UI/Main Menu New.png" id="2_3so2u"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://s3lalco578c4" path="res://Sprites/new color palette/UI/Logo (1).png" id="4_b3sf8"]
 [ext_resource type="AudioStream" uid="uid://gwiij4y1s684" path="res://Sounds/old-radio-button-click-97549.mp3" id="5_0q41i"]
 [ext_resource type="Texture2D" uid="uid://cphsebbnjaqm0" path="res://Sprites/new color palette/UI/Star.png" id="5_brg6b"]
+[ext_resource type="PackedScene" uid="uid://bcu5gvr3bqk2o" path="res://Scenes/Transition.tscn" id="6_l18x8"]
 [ext_resource type="AudioStream" uid="uid://det85fa3442du" path="res://Sounds/Hindu Song from the Opera 'Sadko'.mp3" id="8_h65i6"]
 
 [node name="Menu" type="Node2D"]
@@ -37,7 +38,6 @@ theme_override_fonts/font = ExtResource("3_vapd3")
 theme_override_font_sizes/font_size = 12
 text = "> Play"
 script = ExtResource("4_5jqvl")
-scene_to_load = "Prologue"
 
 [node name="ButtonClickPlayer" type="AudioStreamPlayer2D" parent="Play"]
 stream = ExtResource("5_0q41i")
@@ -69,5 +69,7 @@ texture = ExtResource("5_brg6b")
 stream = ExtResource("8_h65i6")
 autoplay = true
 
-[connection signal="pressed" from="Play" to="Play" method="_on_play_pressed"]
+[node name="Transition" parent="." instance=ExtResource("6_l18x8")]
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
