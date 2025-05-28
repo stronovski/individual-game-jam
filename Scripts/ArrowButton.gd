@@ -78,7 +78,7 @@ func _on_OkayArea_area_exited(area):
 		if current_note == area:
 			area.start_falling_behind()
 			get_parent().emit_missed()
-			get_parent().show_feedback(0)
+			get_parent().show_feedback(0, 1)
 
 
 func _on_PushTimer_timeout():

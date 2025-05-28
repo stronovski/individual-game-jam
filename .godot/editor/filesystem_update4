@@ -1,0 +1,13 @@
+res://default_env.tres
+res://Scenes/Game.tscn
+res://Scenes/Menu.tscn
+res://Scenes/KeyboardButton.tscn
+res://Scenes/LevelSelect.tscn
+res://Scenes/ArrowButton.tscn
+res://Scenes/Transition.tscn
+res://Scenes/KeyboardButtonCompiled.tscn
+res://Scenes/Prologue.tscn
+res://Scenes/Global.tscn
+res://Scenes/Note.tscn
+res://ParticlesTest.tscn
+res://Scripts/ArrowButton.gd

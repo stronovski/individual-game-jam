@@ -59,11 +59,49 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Label4" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.488055
+anchor_top = 1.11659
+anchor_right = -0.488055
+anchor_bottom = 1.11659
+offset_left = 280.0
+offset_top = 565.0
+offset_right = 866.0
+offset_bottom = 788.0
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 40
+text = "Insert BPM:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.488055
+anchor_top = 1.11659
+anchor_right = -0.488055
+anchor_bottom = 1.11659
+offset_left = 282.0
+offset_top = 713.0
+offset_right = 868.0
+offset_bottom = 936.0
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("3_3slxg")
+theme_override_font_sizes/font_size = 30
+text = "Recommended: 80-200 BPM"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="WriteButton" type="LinkButton" parent="."]
-offset_left = 464.0
-offset_top = 821.0
-offset_right = 845.0
-offset_bottom = 951.0
+offset_left = 469.0
+offset_top = 849.0
+offset_right = 850.0
+offset_bottom = 979.0
 scale = Vector2(0.799999, 0.799999)
 theme_override_colors/font_color = Color(0.176471, 0.176471, 0.176471, 1)
 theme_override_fonts/font = ExtResource("4_kk3m4")
@@ -72,24 +110,11 @@ text = "> Write"
 script = ExtResource("5_70px4")
 metadata/_edit_use_anchors_ = true
 
-[node name="WriteButton2" type="LinkButton" parent="."]
-offset_left = 458.0
-offset_top = 685.0
-offset_right = 907.0
-offset_bottom = 815.0
-scale = Vector2(0.52, 0.52)
-theme_override_colors/font_color = Color(0.176471, 0.176471, 0.176471, 1)
-theme_override_fonts/font = ExtResource("4_kk3m4")
-theme_override_font_sizes/font_size = 70
-text = "Insert BPM:"
-script = ExtResource("5_70px4")
-metadata/_edit_use_anchors_ = true
-
 [node name="Label3" type="Label" parent="."]
-offset_left = 225.0
-offset_top = 484.0
-offset_right = 953.0
-offset_bottom = 668.0
+offset_left = 223.0
+offset_top = 465.0
+offset_right = 951.0
+offset_bottom = 649.0
 theme_override_colors/font_color = Color(0.56, 0.39928, 0.3304, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_3slxg")
@@ -105,10 +130,14 @@ metadata/_edit_use_anchors_ = true
 [node name="Transition" parent="." instance=ExtResource("7_fqjlp")]
 
 [node name="BPMInput" type="LineEdit" parent="."]
-offset_left = 511.0
-offset_top = 748.0
-offset_right = 636.0
-offset_bottom = 803.0
+offset_left = 482.0
+offset_top = 709.0
+offset_right = 607.0
+offset_bottom = 764.0
+scale = Vector2(1.41777, 1.5316)
+theme_override_fonts/font = ExtResource("4_kk3m4")
+theme_override_font_sizes/font_size = 30
+placeholder_text = "85"
+alignment = 1
 
 [connection signal="pressed" from="WriteButton" to="." method="_on_write_button_pressed"]
-[connection signal="pressed" from="WriteButton2" to="." method="_on_write_button_pressed"]
