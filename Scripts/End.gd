@@ -1,7 +1,7 @@
 extends Node2D
 
-var epilogue = "res://scenes/Epilogue.tscn"
-var menu = "res://scenes/Menu.tscn"
+var epilogue = "res://Scenes/Epilogue.tscn"
+var menu = "res://Scenes/Menu.tscn"
 
 
 func _ready():

@@ -11,6 +11,8 @@ var speed = 0
 var hit = false
 @export var note_value = ""
 
+var lane := 0
+
 var falling_behind := false
 @onready var original_z_index = z_index
 
@@ -26,8 +28,6 @@ func _physics_process(delta):
 		if position.x < 0:
 			if !hit:
 				if get_parent().has_method("reset_combo"):
-					#get_parent().emit_missed()
-					#get_parent().show_feedback(0)
 					get_parent().reset_combo()
 			queue_free()
 	else:
@@ -35,6 +35,7 @@ func _physics_process(delta):
 
 
 func initialize(lane, value = ""):
+	self.lane = lane
 	if lane == 0:
 		position = LEFT_LANE_SPAWN
 		note_value = value
@@ -57,7 +58,8 @@ func destroy(score):
 	$Node2D/NoteLabel.visible = false
 	$Timer.start()
 	hit = true
-	get_parent().show_feedback(score)
+	get_parent().show_feedback(score, lane)
+
 
 func _on_Timer_timeout():
 	queue_free()

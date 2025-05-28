@@ -3,6 +3,8 @@ extends Node2D
 signal beat(position)
 signal measure_signal(position)
 
+var bpm: int = 85
+
 var current_level: LevelData  # Store the selected level
 var levels: Array[LevelData] = []  # All available levels
 
@@ -13,6 +15,12 @@ var good = 0
 var okay = 0
 var missed = 0
 var grade = "NA"
+
+func set_bpm(value: int):
+	bpm = value
+
+func get_bpm() -> int:
+	return bpm
 
 
 func set_score(new):

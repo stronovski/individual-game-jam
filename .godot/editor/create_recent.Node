@@ -1,14 +1,3 @@
+GPUParticles2D
+LineEdit
 AudioStreamPlayer2D
-LinkButton
-CanvasLayer
-Node2D
-AnimationPlayer
-ColorRect
-Button
-Label
-Timer
-Sprite2D
-MarginContainer
-AnimatedSprite2D
-CanvasGroup
-CollisionShape2D

@@ -19,12 +19,12 @@ func _unhandled_input(event):
 			_handle_hit()
 			
 	# Visual feedback
-	if (lane_type == "combined" and event.is_action_pressed(str(expected_input).to_lower())) or \
-		(lane_type == "space" and event.is_action_pressed("ui_accept")):
-		$AnimatedSprite2D.frame = 1
-	elif event.is_action_released(str(expected_input)) or \
-		event.is_action_released("ui_accept"):
-			$PushTimer.start()
+	#if (lane_type == "combined" and event.is_action_pressed(str(expected_input).to_lower())) or \
+		#(lane_type == "space" and event.is_action_pressed("ui_accept")):
+		#$AnimatedSprite2D.frame = 1
+	#elif event.is_action_released(str(expected_input)) or \
+		#event.is_action_released("ui_accept"):
+			#$PushTimer.start()
 
 
 func _handle_hit():

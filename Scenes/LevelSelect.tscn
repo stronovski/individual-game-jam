@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b6xrlk1hkfgbc"]
 
 [ext_resource type="Script" path="res://Scripts/LevelSelect.gd" id="1_cf0yn"]
-[ext_resource type="AudioStream" uid="uid://dd1bpcab6abgh" path="res://Sounds/Sufjan Stevens, Death With Dignity (Official Audio) copy.mp3" id="2_gydll"]
+[ext_resource type="AudioStream" uid="uid://dd1bpcab6abgh" path="res://Sounds/deathwithdignitycopy.mp3" id="2_gydll"]
 [ext_resource type="Texture2D" uid="uid://daxskl4m07x4d" path="res://Sprites/new color palette/Background/Death With Dignity.png" id="2_r6wg7"]
 [ext_resource type="FontFile" uid="uid://bukql8xvwdedr" path="res://Fonts/Kingthings Trypewriter 2.ttf" id="3_3slxg"]
 [ext_resource type="FontFile" uid="uid://dc5o30b1fag" path="res://Fonts/Chalkduster.ttf" id="4_kk3m4"]
@@ -60,10 +60,11 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="WriteButton" type="LinkButton" parent="."]
-offset_left = 420.0
-offset_top = 755.0
-offset_right = 801.0
-offset_bottom = 885.0
+offset_left = 464.0
+offset_top = 821.0
+offset_right = 845.0
+offset_bottom = 951.0
+scale = Vector2(0.799999, 0.799999)
 theme_override_colors/font_color = Color(0.176471, 0.176471, 0.176471, 1)
 theme_override_fonts/font = ExtResource("4_kk3m4")
 theme_override_font_sizes/font_size = 70
@@ -71,11 +72,24 @@ text = "> Write"
 script = ExtResource("5_70px4")
 metadata/_edit_use_anchors_ = true
 
+[node name="WriteButton2" type="LinkButton" parent="."]
+offset_left = 458.0
+offset_top = 685.0
+offset_right = 907.0
+offset_bottom = 815.0
+scale = Vector2(0.52, 0.52)
+theme_override_colors/font_color = Color(0.176471, 0.176471, 0.176471, 1)
+theme_override_fonts/font = ExtResource("4_kk3m4")
+theme_override_font_sizes/font_size = 70
+text = "Insert BPM:"
+script = ExtResource("5_70px4")
+metadata/_edit_use_anchors_ = true
+
 [node name="Label3" type="Label" parent="."]
-offset_left = 224.0
-offset_top = 521.0
-offset_right = 952.0
-offset_bottom = 705.0
+offset_left = 225.0
+offset_top = 484.0
+offset_right = 953.0
+offset_bottom = 668.0
 theme_override_colors/font_color = Color(0.56, 0.39928, 0.3304, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("3_3slxg")
@@ -90,4 +104,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Transition" parent="." instance=ExtResource("7_fqjlp")]
 
+[node name="BPMInput" type="LineEdit" parent="."]
+offset_left = 511.0
+offset_top = 748.0
+offset_right = 636.0
+offset_bottom = 803.0
+
 [connection signal="pressed" from="WriteButton" to="." method="_on_write_button_pressed"]
+[connection signal="pressed" from="WriteButton2" to="." method="_on_write_button_pressed"]

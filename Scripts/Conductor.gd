@@ -1,12 +1,13 @@
 extends AudioStreamPlayer
 
-@export var bpm := 100
+var bpm: int
+var sec_per_beat: float
+
 @export var measures := 4
 
 # Tracking the beat and song position
 var song_position = 0.0
 var song_position_in_beats = 1
-var sec_per_beat = 60.0 / bpm
 var last_reported_beat = 0
 var beats_before_start = 0
 var measure = 1
@@ -17,7 +18,9 @@ var time_off_beat = 0.0
 
 
 func _ready():
+	bpm = Global.get_bpm()
 	sec_per_beat = 60.0 / bpm
+	print("Game BPM from Conductor: ", bpm)
 
 
 func _physics_process(_delta):

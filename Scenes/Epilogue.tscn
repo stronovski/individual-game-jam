@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Epilogue.gd" id="1_qmfh4"]
 [ext_resource type="Texture2D" uid="uid://phsftv0x6ebm" path="res://Sprites/new color palette/Background/The Docks.png" id="2_p4fyn"]
-[ext_resource type="AudioStream" uid="uid://cwmorcd67luun" path="res://Sounds/Hitori no kimie - Look Back Original Soundtrack.mp3" id="3_50010"]
+[ext_resource type="AudioStream" uid="uid://cwmorcd67luun" path="res://Sounds/hitorinokimie.mp3" id="3_50010"]
 [ext_resource type="PackedScene" uid="uid://bcu5gvr3bqk2o" path="res://Scenes/Transition.tscn" id="4_e7owh"]
 
 [sub_resource type="Animation" id="Animation_8le30"]

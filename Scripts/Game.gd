@@ -9,12 +9,12 @@ var good = 0
 var okay = 0
 var missed = 0
 
-var bpm = 85
+var bpm: int
+var sec_per_beat: float
 
 var song_position = 0.0
 var song_position_in_beats = 0
 var last_spawned_beat = 0
-var sec_per_beat = 60.0 / bpm
 
 var spawn_1_beat = 0
 var spawn_2_beat = 0
@@ -35,6 +35,8 @@ var current_char_index = 0
 @onready var feedback_label = $CanvasLayer/FeedbackLabel
 
 func _ready():
+	bpm = Global.get_bpm()
+	sec_per_beat = 60.0 / bpm
 	print("Game BPM: ", bpm)
 	randomize()
 	$Conductor.play_with_beat_offset(8)
@@ -77,19 +79,19 @@ func _on_Conductor_beat(position):
 		spawn_3_beat = 0
 		spawn_4_beat = 2
 	if song_position_in_beats > 162:
-		spawn_1_beat = 2
-		spawn_2_beat = 2
-		spawn_3_beat = 1
+		spawn_1_beat = 1
+		spawn_2_beat = 1
+		spawn_3_beat = 2
 		spawn_4_beat = 1
 	if song_position_in_beats > 194:
 		spawn_1_beat = 2
-		spawn_2_beat = 2
+		spawn_2_beat = 0
 		spawn_3_beat = 1
 		spawn_4_beat = 2
 	if song_position_in_beats > 228:
 		spawn_1_beat = 0
 		spawn_2_beat = 2
-		spawn_3_beat = 1
+		spawn_3_beat = 0
 		spawn_4_beat = 2
 	if song_position_in_beats > 258:
 		spawn_1_beat = 1
@@ -102,21 +104,21 @@ func _on_Conductor_beat(position):
 		spawn_3_beat = 0
 		spawn_4_beat = 2
 	if song_position_in_beats > 322:
-		spawn_1_beat = 3
+		spawn_1_beat = 1
 		spawn_2_beat = 2
-		spawn_3_beat = 2
+		spawn_3_beat = 0
 		spawn_4_beat = 1
 	if song_position_in_beats > 388:
 		spawn_1_beat = 1
 		spawn_2_beat = 0
-		spawn_3_beat = 0
+		spawn_3_beat = 1
 		spawn_4_beat = 0
-	if song_position_in_beats > 396:
+	if song_position_in_beats > 415:
 		spawn_1_beat = 0
 		spawn_2_beat = 0
 		spawn_3_beat = 0
 		spawn_4_beat = 0
-	if song_position_in_beats > 404:
+	if song_position_in_beats > 455:
 		Global.set_score(score)
 		Global.combo = max_combo
 		Global.great = great
@@ -155,7 +157,7 @@ func _spawn_notes(to_spawn):
 			add_child(instance)
 			print("Spawned note with value: ", note_value)
 	
-func show_feedback(score):
+func show_feedback(score, lane):
 	if $FeedbackTimer.time_left > 0:
 		$FeedbackTimer.stop()
 		
@@ -164,9 +166,17 @@ func show_feedback(score):
 			feedback_label.text = "GREAT"
 			feedback_label.modulate = Color("f6d6bd")
 			#$GreatSound.play()
+			if lane == 0:
+				$GPUParticles2D.emitting = true
+			elif lane == 1:
+				$GPUParticles2D2.emitting = true
 		2:
 			feedback_label.text = "GOOD"
 			feedback_label.modulate = Color("c3a38a")
+			if lane == 0:
+				$GPUParticles2D.emitting = true
+			elif lane == 1:
+				$GPUParticles2D2.emitting = true
 			#$GoodSound.play()
 		1:
 			feedback_label.text = "OKAY"

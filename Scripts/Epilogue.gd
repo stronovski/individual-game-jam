@@ -3,7 +3,7 @@ extends Node2D
 @onready var transition = $Transition
 @export var dialogue_start: String = "start"
 @export var resource_path: String = "res://Dialogues/dialogue.dialogue"
-@export var next_scene_path = "res://Scenes/MainMenu.tscn"
+@export var next_scene_path = "res://Scenes/Menu.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
